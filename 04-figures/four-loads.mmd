@@ -1,0 +1,11 @@
+flowchart LR
+  V["4K视频"] --> ISP["ISP/视频编解码"]
+  A["本地AI"] --> NPU["CPU/GPU/NPU"]
+  C["蜂窝通信"] --> M["Telephony/Modem"] --> RF["RF/天线（终端级）"]
+  G["持续游戏"] --> D["GPU/BufferQueue/HWC显示"]
+  ISP -.-> S["片内缓存/DRAM/存储（逐任务流量未知）"]
+  NPU -.-> S
+  D -.-> S
+  PM["运行时/DVFS/热管理"] -.-> NPU
+  PM -.-> M
+  PM -.-> D
