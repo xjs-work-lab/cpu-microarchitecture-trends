@@ -43,12 +43,12 @@
 
 ## 四、下一步
 
-1. 深读[第十七轮初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)中的 LLVM SME/AAPCS64 和分支预测种子，先核实机制、基线与迁移边界。
+1. 深读[第十七轮初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)中的 LLVM SME/AAPCS64 和分支预测种子，核实机制、基线与迁移边界。
 2. 按[范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)定向补充 ROB/LSQ、物理寄存器/重命名、移动缓存/预取的原始来源；不重做已结题 Agentic CPU-uArch 的宽泛研究。
-2. CPU/LLVM 专项判断复用 [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md)与 [Round15F 技术机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。
-3. 本仓继续收集 [Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1) 对 EX-01 至 EX-12 的真实专家裁决。
-4. 只对可能改变全 SoC 核心判断的 Claim 定向补证；不为清空28条未映射来源而无限扩展。
-5. PPT 批量制作继续暂停，直到专家裁决与用户视觉方向确认。
-6. 若未来出现会改变 CPU/LLVM 决策的新公开原始证据，再按对应 SSOT 的门槛局部更新。
+3. CPU/LLVM 专项判断复用 [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md)与 [Round15F 技术机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。
+4. 本仓继续收集 [Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1) 对 EX-01 至 EX-12 的真实专家裁决。
+5. 只对可能改变全 SoC 核心判断的 Claim 定向补证；不为清空28条未映射来源而无限扩展。
+6. PPT 批量制作继续暂停，直到专家裁决与用户视觉方向确认。
+7. 若未来出现会改变 CPU/LLVM 决策的新公开原始证据，再按对应 SSOT 的门槛局部更新。
 
 公开仓不存公司非公开材料或未经授权的第三方全文。
