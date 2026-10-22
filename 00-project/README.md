@@ -1,7 +1,8 @@
 # 项目与研究状态
 
 - **[CPU 微架构与 LLVM 深化支线范围锁定](cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)**：第十六轮定义了尚未系统覆盖的通用移动 CPU 核、寄存器/状态、内存层次与 LLVM 代码生成问题；下一步是小规模 seed discovery，不代表新来源已经核验。
-- [第十七轮初始来源筛选](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md) · [事务记录](research-transactions/round-17-2026-10-22.md)\n- [第十六轮事务记录](research-transactions/round-16-2026-10-22.md) · [第十五轮跨仓范围核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)
+- [第十七轮初始来源筛选](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md) · [事务记录](research-transactions/round-17-2026-10-22.md)
+- [第十六轮事务记录](research-transactions/round-16-2026-10-22.md) · [第十五轮跨仓范围核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)
 
 - **[续研入口（最新）](00-续研入口.md)**
 - [五个问题/研究任务](01-任务简报.md)
