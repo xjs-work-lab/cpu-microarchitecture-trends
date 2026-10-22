@@ -1,5 +1,7 @@
 # 分析推论
 
+**跨项目 CPU/LLVM 专项入口：** [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md) · [Round15F CPU/LLVM机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。该项目已在公开证据范围内结题；本仓只引用，不复制其证据对象或重启宽泛研究。\n
+
 **当前结论审计入口：** [第十四轮结论审计与技术决策闭环](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)。该文基于现有SSOT将K01–K10分为结构信号、系统观察、假设与未知，并列出竞争解释、可用表述和下一步判别方式。
 
 [跨负载判断及待证伪问题](跨负载判断与待证伪问题.md)：当前唯一综合推论入口；区别于[原始来源证据](../02-evidence/README.md)和[正式交付](../05-deliverables/README.md)。
