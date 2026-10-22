@@ -1,5 +1,7 @@
 # 分析推论
 
+**新支线范围锁定：** [移动 CPU 微架构与 LLVM 深化支线](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)。目前已明确问题边界与领域地图，下一步才开始高质量来源筛选；尚未声称完成新的来源核验。\n
+
 **跨项目 CPU/LLVM 专项入口：** [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md) · [Round15F CPU/LLVM机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。该项目已在公开证据范围内结题；本仓只引用，不复制其证据对象或重启宽泛研究。\n
 
 **当前结论审计入口：** [第十四轮结论审计与技术决策闭环](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)。该文基于现有SSOT将K01–K10分为结构信号、系统观察、假设与未知，并列出竞争解释、可用表述和下一步判别方式。
