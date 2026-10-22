@@ -1,8 +1,8 @@
 # 智能手机 SoC 整体架构演进：技术洞察关键证据收敛版 v1.3
 
-**资料截点：2026-10-21｜研究模式：PUBLIC_ONLY｜版本：v1.3（第二次内容审计修订版，技术专家评审待完成）**
+**资料截点：2026-10-21｜研究模式：PUBLIC_ONLY｜版本：v1.3（第十一轮关键证据收敛修订版，技术专家评审待完成）**
 
-> **审计结论：定性机制框架经重点核查基本成立，但不可宣称全量证据已核实或芯片级定量收益已证明。** 本次补齐2007—2015早期及中端代表节点、2017华为同期证据，并明确证据台账的字段缺失问题。v1.0保留作历史版本，具体纠正见[内容审计记录](../02-evidence/audits/round-10-深入内容与正确性审计-2026-10-21.md)。
+> **审计结论：定性机制框架经重点核查基本成立，但不可宣称全量证据已核实或芯片级定量收益已证明。** v1.3延续v1.2的历史/平台补充，并进一步核对2013年HMP发布时间、NNAPI NDK API与底层HAL生命周期、Pixel 6的具体ISP/TPU用例、设备级功耗测量口径及MLPerf比较条件。前轮审计记录见[第十轮深入审计](../02-evidence/audits/round-10-深入内容与正确性审计-2026-10-21.md)，本轮见[第十一轮证据闸门](../02-evidence/audits/round-11-关键证据收敛与发布闸门-2026-10-21.md)。
 
 > **核心结论**
 >
@@ -65,7 +65,7 @@
 
 ### 1.4 资料边界声明
 
-审计前基础台账有103条记录；此前补充A01–A07七条后为110条。本轮确认E13与A01指向同一2007 Qualcomm新闻稿，故将E13标为重复记录并从统一台账移除；保留新增E14（2010 A4）、E15（2019 765/765G集成5G反例）与P14（M7独立IC拆解）三条唯一来源，清理重复行后共**114条唯一来源记录**。旧来源并非全部逐篇在线核验。第九轮专门补入 10 条测量/方法资料，并抽查 8 条关键历史/前瞻来源。2024 与 2025 年两篇 LTE/5G 能耗论文来自同一作者团队且主要百分比重复，按一条研究链处理；一篇 2026 年所谓 UE 能耗研究实际使用笔记本加外置 5G CPE，不能作为手机 Modem 测量。[X01][X02][X05]
+当前统一台账以CSV内的唯一ID为准，共**114条唯一来源记录**。E13与A01指向同一2007 Qualcomm新闻稿，E13已作为重复记录移除；E14（2010 A4）、E15（2019 Snapdragon 765/765G集成5G反例）、P14（M7独立IC拆解）及第十一轮新增Y01（AOSP Neural Networks HAL接口说明）均保留各自唯一ID。历史版本对来源数量的分段统计口径不一致，故不再以历史分段算术代替当前CSV实数。旧来源并非全部逐篇在线核验。第九轮专门补入10条测量/方法资料，并抽查8条关键历史/前瞻来源。2024 与 2025 年两篇 LTE/5G 能耗论文来自同一作者团队且主要百分比重复，按一条研究链处理；一篇 2026 年所谓 UE 能耗研究实际使用笔记本加外置 5G CPE，不能作为手机 Modem 测量。[X01][X02][X05]
 
 ## 2. 全 SoC 观察框架：从用户任务到可见结果
 
@@ -490,7 +490,7 @@
 
 ## 11. 关键论点、证据与反证入口
 
-**台账完整性重要限制：**截至审计前，原103条记录虽有ID、标题及URL，但“对应判断”“比较基线”“指标与单位”“测量层级”等列长期空缺。不能仅以“113条来源记录”宣称形成完整可审计的数值证据链。本稿优先使用下表的明确Claim→Source→Limit映射；详细问题和整改优先级见[深入审计](../02-evidence/audits/round-10-深入内容与正确性审计-2026-10-21.md)。
+**台账完整性重要限制：**截至审计前，原103条记录虽有ID、标题及URL，但“对应判断”“比较基线”“指标与单位”“测量层级”等列长期空缺。不能仅以“114条来源记录”宣称形成完整可审计的数值证据链。本稿优先使用下表的明确Claim→Source→Limit映射；详细问题和整改优先级见[深入审计](../02-evidence/audits/round-10-深入内容与正确性审计-2026-10-21.md)。
 
 | 关键论点 | 主要证据 ID | 证据性质 | 最重要的限制/反证 |
 |---|---|---|---|
@@ -534,10 +534,12 @@
 | 主题 | 原始来源 | 用于支撑的结论 |
 |---|---|---|
 | 早期 SoC 与 LTE | [Qualcomm Snapdragon S4 白皮书](https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/QU_SnapdragonS4_White_Paper_FNL_Rev6.pdf)；[LTE 集成说明](https://www.qualcomm.com/news/onq/2012/06/what-integrating-4g-lte-modem-means-snapdragon-s4-processor-and-battery-life) | 系统结构与 LTE/AP 集成；不单独归因节能 |
+| CPU异构与HMP时序 | [Exynos 5 Octa发布（2013-03）](https://news.samsung.com/global/samsung-announces-the-availability-of-exynos-5-octa-for-new-generation-of-mobile-devices-2)；[HMP发布（2013-09）](https://news.samsung.com/global/samsung-primes-exynos-5-octa-for-arm-big-little-technology-with-heterogeneous-multi-processing-capability) | 分开记录物理大小核配置与HMP软件能力可用时间；70%节能为厂商特定基线主张 |
 | 低功耗感知与安全 | [Apple iPhone 5s / A7 / M7](https://www.apple.com/newsroom/2013/09/10Apple-Announces-iPhone-5s-The-Most-Forward-Thinking-Smartphone-in-the-World/) | 区分 SoC 内安全域与手机级 M7 |
 | 异构 DSP/ISP/媒体 | [Snapdragon 820 产品简报](https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/snapdragon_product_brief_820_update062416.pdf)；[Symphony 系统管理](https://www.qualcomm.com/news/onq/2015/09/snapdragon-820-and-kryo-cpu-heterogeneous-computing-and-role-custom-compute) | 固定流水线、可编程视觉和系统管理 |
 | 5G 平台边界 | [Snapdragon 865 平台发布](https://www.qualcomm.com/news/releases/2019/12/qualcomm-introduces-worlds-most-advanced-5g-mobile-platform)；[2019 Snapdragon Summit 演示](https://www.qualcomm.com/media/documents/files/2019-snapdragon-tech-summit-2019-keynote-alex-katouzian.pdf) | 865 AP 与 X55 Modem Module 的平台边界 |
 | 跨引擎影像/AI | [Google Tensor](https://blog.google/products-and-platforms/devices/pixel/introducing-google-tensor/)；[Pixel 6 相机技术说明](https://blog.google/products-and-platforms/devices/pixel/pixel-6s-camera-combines-hardware-software-and-ml/) | TPU/ISP/CPU/GPU 协作；不提供每域能耗占比 |
+| Android AI软件接口边界 | [AOSP Neural Networks API drivers](https://source.android.com/docs/core/interaction/neural-networks)；[NNAPI Migration Guide](https://developer.android.com/ndk/guides/neuralnetworks/migration-guide) | Android 15起NNAPI NDK应用API弃用，HAL继续支持；不证明某机型或模型实际执行在哪个硬件域 |
 | 厂商异构方案 | [Exynos 2200](https://semiconductor.samsung.com/processor/mobile-processor/exynos-2200/)；[Dimensity 9300 白皮书](https://www.mediatek.com/hubfs/Dimensity-9300-All-Big-Cores_Whitepaper_ENG_Final.pdf?hsLang=en) | 不同 CPU/GPU/NPU 与通信/媒体方案 |
 | 共享缓存/本地 AI | [Dimensity 9500](https://www.mediatek.com/products/smartphones/mediatek-dimensity-9500)；[Qualcomm Hexagon 2026 架构披露](https://www.qualcomm.com/news/onq/2026/09/hexagon-npu-agentic-ai-architecture) | 共享数据管理与 NPU 能力披露；收益仍需独立验证 |
 | 2026 IP 方向 | [Arm CSS for Mobile 2](https://newsroom.arm.com/news/arm-css-for-mobile-2-agentic-ai-mobile-graphics)；[C2 CPU cluster 技术说明](https://newsroom.arm.com/blog/arm-css-for-mobile-2-and-c2-cpu-cluster) | CPU SME2、GPU 神经加速、互连/QoS/软件 IP 方向 |
@@ -558,7 +560,7 @@
 | 2007—2026宏观系统架构和负载变化的**有边界定性说明** | **有条件通过** | 主要历史节点和近期官方技术发布有原始资料，补充了早期与大众型路线 |
 | 按CPU/GPU/NPU、ISP/视频/显示、Modem/RF、内存、软件、热与安全的**功能分工说明** | **有条件通过** | 公开功能与产品/IP边界可说明；实际片上拓扑与跨引擎时序不完整 |
 | 五个研究问题的**定性答案、替代路线与不确定性** | **有条件通过** | 不能升级成“所有SoC全面统计”或“独立验证的普遍收益” |
-| 以“113条来源记录”声称**来源完整全量核验** | **不通过** | 台账早期条目定位与字段缺失；来源去重/独立性不充分 |
+| 以“114条来源记录”声称**来源完整全量核验** | **不通过** | 台账早期条目定位与字段缺失；来源去重/独立性不充分 |
 | 报告包含“某机制改善芯片能效/IPC/FPS X%”的**微架构因果定量结论** | **不通过** | 缺受控A/B、软件热环境和域级能耗分解 |
 | 直接用于具体芯片项目**工程立项/收益承诺** | **待验证** | 未提供特定产品/工作负载/功耗边界的可证伪对照 |
 
