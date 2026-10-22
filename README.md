@@ -1,12 +1,12 @@
 # 智能手机 SoC 整体架构演进｜技术洞察知识库
 
-> **当前状态（2026-10-22）：第十六轮已锁定移动 CPU 微架构/LLVM 剩余缺口支线的范围与领域地图。** 本仓 v1.3 仍是全 SoC 系统级报告；Agentic CPU-uArch 专项结论继续复用，不重开宽泛研究。新支线下一步进入少量高质量原始来源 seed discovery。全 SoC 报告仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
+> **当前状态（2026-10-22）：第十七轮已完成移动 CPU 微架构/LLVM 初始来源筛选。** 官方 LLVM/AAPCS64 来源已提供可核验的 SME/ZA 状态、ABI 与 spill/reload 机制；分支预测论文目前主要是客户端高性能核心证据，手机核心直接覆盖仍不足。全 SoC 报告仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
 
 仓名 `cpu-microarchitecture-trends` 沿用早期命名；项目研究对象是**智能手机完整 SoC/平台的 2007—2026 年演进及 2027—2028 年有条件前瞻**，并非只研究CPU。覆盖 CPU/GPU/DSP/NPU、ISP/编解码/显示、Modem-RF/天线、缓存/DRAM/互连、软件运行时、常驻感知/安全、电源域/封装/散热。严格区分**裸片、同封装/配套芯片、平台、手机整机和网络环境**。
 
 ## 一、最重要的入口
 
-- **[CPU 微架构与 LLVM 深化支线：范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)** — 明确通用移动 CPU 核、寄存器/状态、存储层次与 LLVM 代码生成的剩余问题。
+- **[第十七轮 CPU 微架构/LLVM 初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)** — 官方 SME/ABI/LLVM 种子、分支预测研究与设备迁移边界。\n- **[CPU 微架构与 LLVM 深化支线：范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)** — 明确通用移动 CPU 核、寄存器/状态、存储层次与 LLVM 代码生成的剩余问题。
 - **[第十五轮跨仓范围核对与 CPU/LLVM 成果复用](02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)** — 明确本仓全 SoC 报告与已结题 Agentic CPU-uArch 专项的分工，避免重复研究。
 - **[第十四轮结论审计与技术决策闭环](02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)** — 核心结论强度、竞争解释、可验证性与范围缺口。
 - **[当前主报告 v1.3：智能手机 SoC 整体架构演进](05-deliverables/08-智能手机SoC整体架构演进-技术洞察证据收敛版-v1.3.md)** — 历史/CPU/四任务与系统架构综合；待专家评审。
@@ -42,7 +42,7 @@
 
 ## 四、下一步
 
-1. 按[CPU 微架构与 LLVM 深化支线的范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)开展小规模、高质量 seed discovery；不重做已结题 Agentic CPU-uArch 的宽泛研究。
+1. 深读[第十七轮初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)中的 LLVM SME/AAPCS64 和分支预测种子，先核实机制、基线与迁移边界。\n2. 按[范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)定向补充 ROB/LSQ、物理寄存器/重命名、移动缓存/预取的原始来源；不重做已结题 Agentic CPU-uArch 的宽泛研究。
 2. CPU/LLVM 专项判断复用 [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md)与 [Round15F 技术机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。
 3. 本仓继续收集 [Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1) 对 EX-01 至 EX-12 的真实专家裁决。
 4. 只对可能改变全 SoC 核心判断的 Claim 定向补证；不为清空28条未映射来源而无限扩展。
