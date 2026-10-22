@@ -1,12 +1,12 @@
 # 智能手机 SoC 整体架构演进｜技术洞察知识库
 
-> **当前状态（2026-10-22）：第十五轮已完成跨仓范围核对。** 本仓 v1.3 是全 SoC 系统级报告；Agentic 手机 CPU/LLVM 的既有专项结论已在独立仓结题，应复用而非重启宽泛研究。全 SoC 报告仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。114条唯一来源中86条映射核心Claim、28条未映射；不以机械清零为目标。
+> **当前状态（2026-10-22）：第十六轮已锁定移动 CPU 微架构/LLVM 剩余缺口支线的范围与领域地图。** 本仓 v1.3 仍是全 SoC 系统级报告；Agentic CPU-uArch 专项结论继续复用，不重开宽泛研究。新支线下一步进入少量高质量原始来源 seed discovery。全 SoC 报告仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
 
 仓名 `cpu-microarchitecture-trends` 沿用早期命名；项目研究对象是**智能手机完整 SoC/平台的 2007—2026 年演进及 2027—2028 年有条件前瞻**，并非只研究CPU。覆盖 CPU/GPU/DSP/NPU、ISP/编解码/显示、Modem-RF/天线、缓存/DRAM/互连、软件运行时、常驻感知/安全、电源域/封装/散热。严格区分**裸片、同封装/配套芯片、平台、手机整机和网络环境**。
 
 ## 一、最重要的入口
 
-- **[第十五轮跨仓范围核对与 CPU/LLVM 成果复用](02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)** — 明确本仓全 SoC 报告与已结题 Agentic CPU-uArch 专项的分工，避免重复研究。
+- **[CPU 微架构与 LLVM 深化支线：范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)** — 明确通用移动 CPU 核、寄存器/状态、存储层次与 LLVM 代码生成的剩余问题。\n- **[第十五轮跨仓范围核对与 CPU/LLVM 成果复用](02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)** — 明确本仓全 SoC 报告与已结题 Agentic CPU-uArch 专项的分工，避免重复研究。
 - **[第十四轮结论审计与技术决策闭环](02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)** — 核心结论强度、竞争解释、可验证性与范围缺口。
 - **[当前主报告 v1.3：智能手机 SoC 整体架构演进](05-deliverables/08-智能手机SoC整体架构演进-技术洞察证据收敛版-v1.3.md)** — 历史/CPU/四任务与系统架构综合；待专家评审。
 - **[Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md)** — Agentic 手机 CPU/LLVM/Runtime 的独立结题决策。
