@@ -6,3 +6,5 @@
 [当前技术洞察审计修订版 v1.1](../05-deliverables/06-智能手机SoC整体架构演进-技术洞察审计修订版-v1.1.md)和[深入正确性审计](../02-evidence/audits/round-10-深入内容与正确性审计-2026-10-21.md)优先于此处第九轮的阶段性判断；旧推论仍可追溯。
 
 当前需优先阅读[第十一轮证据闸门](../02-evidence/audits/round-11-关键证据收敛与发布闸门-2026-10-21.md)及[主报告v1.3](../05-deliverables/08-智能手机SoC整体架构演进-技术洞察证据收敛版-v1.3.md)；此处第九轮判断是过程存档。
+
+**第十二轮（2026-10-22）：** [v1.3反向审查与技术评审准备清单](../02-evidence/audits/round-12-v1.3-反向审查与技术评审准备-2026-10-22.md)；[正式技术评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
