@@ -6,18 +6,20 @@
 
 ## 一、最重要的入口
 
-0. **[第十五轮跨仓范围核对与 CPU/LLVM 成果复用](02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)** — 明确本仓全 SoC 报告与已结题 Agentic CPU-uArch 专项的分工，避免重复研究。\n0. **[第十四轮结论审计与技术决策闭环](02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)** — 将核心结论分为结构信号、系统观察、假设与未知；列出竞争解释、最小验证方式，并指出全SoC报告与详细CPU微架构路线图之间的范围差距。
-
-1. **[当前主报告 v1.3：智能手机 SoC 整体架构演进](05-deliverables/08-智能手机SoC整体架构演进-技术洞察证据收敛版-v1.3.md)** — 在历史/CPU/四任务与系统架构基础上，补HMP发布时间、NNAPI应用API与HAL分层、Tensor ISP/TPU具体功能、Geekerwan及MLPerf测量口径；待专家评审。
-2. **[PPT逐页内容设计v0.1（18页候选）](05-deliverables/09-智能手机SoC架构演进-PPT逐页内容设计-v0.1.md)** — 逐页结论标题、叙事桥接、视觉角色、证据ID、边界与备注合同；第04/07/15页三种角色已有可编辑试制。
-3. [三页试制与渲染QA记录](02-evidence/audits/round-13-ppt-pilot-qa-2026-10-22.md) — 结构、备注、越界和渲染检查；用户视觉验收待完成。
-4. [第十三轮预裁决矩阵与PPT准入清单](02-evidence/audits/round-13-预裁决矩阵与PPT准入清单-2026-10-22.md)。
-5. [第十二轮反向审查与技术评审准备](02-evidence/audits/round-12-v1.3-反向审查与技术评审准备-2026-10-22.md)；[GitHub正式评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
-6. [第十一轮决策性证据收敛与发布闸门](02-evidence/audits/round-11-关键证据收敛与发布闸门-2026-10-21.md)；[第十轮深入审计](02-evidence/audits/round-10-深入内容与正确性审计-2026-10-21.md).
-7. **[续研入口](00-project/00-续研入口.md)** — 唯一主问题、进展、限制、下一步；[五个最终研究问题](00-project/01-任务简报.md)。
-8. [统一证据台账 CSV（114条唯一记录）](02-evidence/02-证据台账.csv) — 86条已映射核心Claim，28条未映射；记录数不等于独立研究数，也不等于所有来源全文/页码已核。
-9. [早期/普及型/华为路线 A01–A07 来源卡](02-evidence/sources/round-10-audit-早期与普及型结构原始来源.md)；[第1–9轮研究索引](01-research/README.md)；[跨负载判断与待证伪问题](03-analysis/跨负载判断与待证伪问题.md)。
-10. [v1.2 审计补充版（历史）](05-deliverables/07-智能手机SoC整体架构演进-技术洞察审计补充修订版-v1.2.md)；[v1.1 审计修订版（历史）](05-deliverables/06-智能手机SoC整体架构演进-技术洞察审计修订版-v1.1.md)；[v1.0 原始综合稿（历史）](05-deliverables/05-智能手机SoC整体架构演进-技术洞察终稿-v1.md)。
+- **[第十五轮跨仓范围核对与 CPU/LLVM 成果复用](02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)** — 明确本仓全 SoC 报告与已结题 Agentic CPU-uArch 专项的分工，避免重复研究。
+- **[第十四轮结论审计与技术决策闭环](02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)** — 核心结论强度、竞争解释、可验证性与范围缺口。
+- **[当前主报告 v1.3：智能手机 SoC 整体架构演进](05-deliverables/08-智能手机SoC整体架构演进-技术洞察证据收敛版-v1.3.md)** — 历史/CPU/四任务与系统架构综合；待专家评审。
+- **[Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md)** — Agentic 手机 CPU/LLVM/Runtime 的独立结题决策。
+- **[CPU/LLVM、微内核与异构 NPU 机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)** — 已有 AArch64/SME/LLVM/微内核与 CPU–NPU 分工证据。
+- **[PPT逐页内容设计 v0.1（18页候选）](05-deliverables/09-智能手机SoC架构演进-PPT逐页内容设计-v0.1.md)** — 逐页结论、叙事、证据ID、外推边界和备注要求。
+- [三页试制与渲染 QA 记录](02-evidence/audits/round-13-ppt-pilot-qa-2026-10-22.md) — 用户视觉验收待完成。
+- [第十三轮预裁决矩阵与 PPT 准入清单](02-evidence/audits/round-13-预裁决矩阵与PPT准入清单-2026-10-22.md)。
+- [第十二轮反向审查与技术评审准备](02-evidence/audits/round-12-v1.3-反向审查与技术评审准备-2026-10-22.md)；[正式评审 Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
+- [第十一轮决策性证据收敛与发布闸门](02-evidence/audits/round-11-关键证据收敛与发布闸门-2026-10-21.md)；[第十轮深入审计](02-evidence/audits/round-10-深入内容与正确性审计-2026-10-21.md)。
+- **[续研入口](00-project/00-续研入口.md)** — 唯一主问题、状态、限制和下一步；[五个最终研究问题](00-project/01-任务简报.md)。
+- [统一证据台账 CSV（114条唯一记录）](02-evidence/02-证据台账.csv) — 86条映射核心 Claim、28条未映射；不等于全文/页码全部核验。
+- [早期/普及型/华为路线 A01–A07 来源卡](02-evidence/sources/round-10-audit-早期与普及型结构原始来源.md)；[第1–9轮研究索引](01-research/README.md)；[跨负载判断与待证伪问题](03-analysis/跨负载判断与待证伪问题.md)。
+- [v1.2审计补充版（历史）](05-deliverables/07-智能手机SoC整体架构演进-技术洞察审计补充修订版-v1.2.md)；[v1.1审计修订版（历史）](05-deliverables/06-智能手机SoC整体架构演进-技术洞察审计修订版-v1.1.md)；[v1.0原始综合稿（历史）](05-deliverables/05-智能手机SoC整体架构演进-技术洞察终稿-v1.md)。
 
 ## 二、目前可以与不可以下的结论
 
