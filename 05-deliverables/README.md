@@ -1,6 +1,6 @@
 # 技术洞察与汇报交付区
 
-## 当前最重要的成果
+## 当前最重要的成果\n\n**CPU/LLVM 专项参考（独立结题仓，不是本报告附属文件）：** [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md) · [CPU/LLVM、微内核与异构 NPU 技术机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。本仓 v1.3 仍以全 SoC 系统级趋势为主；引用专项结论不代表本仓已完成专家评审。
 
 **当前优先阅读：[第十四轮结论审计与技术决策闭环](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)** — 先明确五个研究问题的结论强度、竞争解释、可验证性与全SoC报告和CPU微架构路线图的范围差距；PPT批量制作暂缓。
 
