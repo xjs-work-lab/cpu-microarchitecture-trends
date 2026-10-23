@@ -8,6 +8,8 @@
 - [第二十轮路线与产品化时间审计](audits/round-20-cross-vendor-cpu-route-and-productization-audit-2026-10-23.md)：汇总主张核验、来源层级、因果强度与公开资料边界。
 - [第二十一轮核内机制证据审计](audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)：逐项审计 A72 dispatch 口径、Apple Firestorm 队列术语、Samsung 模拟数据与各厂商公开披露边界。
 - [第二十一轮核内微架构机制原始来源卡](sources/round-21-核内微架构机制原始来源卡.md)：Arm A9/A72/A76/A77/A78、Apple Cyclone/Firestorm、Samsung Exynos M1–M6 的原始来源与边界。
+- [第二十二轮桥接证据审计](audits/round-22-llvm-hardware-codegen-bridge-audit-2026-10-23.md)：审计 LLVM 目标调度模型、寄存器分配、PGO、向量化、prefetch 与 SME/ZA lowering 的直接证据及其手机端效果边界。
+- [第二十二轮 LLVM/调度模型原始来源卡](sources/round-22-LLVM代码生成与调度模型原始来源卡.md)：收录 LLVM CodeGenerator、MachineScheduler、Vectorizers、Clang PGO、llvm-mca、AArch64 TableGen 与 SME 文档。
 
 - [第十七轮 CPU 微架构/LLVM 初始来源筛选](audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)：官方 SME/ABI/LLVM 机制种子、分支预测候选论文及移动适用性边界。
 
