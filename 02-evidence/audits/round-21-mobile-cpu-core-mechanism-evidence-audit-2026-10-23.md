@@ -13,7 +13,7 @@
 | ID | 主张 | 结论 | 证据等级/边界 |
 |---|---|---|---|
 | AU21-01 | Cortex-A9 已有乱序执行与寄存器重命名 | **确认（限定为部分乱序）** | Arm 官方 TRM/产品支持页描述双发射、部分乱序、重命名与动态分支预测。不能等同于后续深窗口全 OoO。 |
-| AU21-02 | Cortex-A72 的 dispatch 是 5 µops/cycle | **保留冲突，不作为统一定量结论** | Arm 工程博客称最多 5 条 µops/cycle 送至执行流水线；Arm 软件优化指南的 dispatch constraints 段又称从顺序段进入乱序段的 dispatch stage 最多 3 µops/cycle。当前不能确认两者是否指同一阶段/定义，故不拿该数字跨代排名。 |
+| AU21-02 | Cortex-A72 的 dispatch 是 5 µops/cycle | **保留术语/计量歧义，不作为统一定量结论** | Arm 工程博客称最多 5 条 µops/cycle 送至执行流水线；Arm 软件优化指南的 dispatch constraints 段又称从顺序段进入乱序段的 dispatch stage 最多 3 µops/cycle。A77 的官方优化指南明确区分 MOP/cycle 与 µOP/cycle，提示 A72 两份来源可能使用了不同术语或阶段定义；当前仍不能确认两者是否指同一计量项，故不拿该数字跨代排名。 |
 | AU21-03 | Cortex-A76 每周期可“执行 8 条指令” | **不支持该简化表述** | 4-wide decode、4–8 条/cycle fetch、最多 8 operations/cycle dispatch、8 条执行流水线是不同指标；一个 macro-op 可能在 dispatch 时拆成两个 µops。实际 IPC 受依赖、分支、端口冲突与访存限制。 |
 | AU21-04 | Cortex-A77 的 OOO window 是 160 项 ROB | **不支持此同义替换** | Arm 说 OOO window 160 instructions；来源未将其定义为 ROB entries。文档保留原始术语。 |
 | AU21-05 | Apple Firestorm 的约 623 项就是 ROB，因此比 Cyclone 的 192 ROB 大约 3.2 倍 | **不支持** | Dougall Johnson 报告约 623 项 rename-retire queue 和约 330 项 coalesced retire queue；Firestorm 结构不同于传统 ROB。AnandTech 的早期分析使用“ROB”措辞，术语与模型需单独保留，不做简单比值。 |
@@ -22,6 +22,7 @@
 | AU21-08 | 预取器越激进，性能越好 | **不成立** | Samsung 论文明确讨论误预取的功耗、带宽和 cache capacity 成本，并采用动态 degree、确认机制、one-pass/two-pass 与置信度调节。 |
 | AU21-09 | A78 的全部提升都来自更大执行结构 | **不成立** | Arm 描述其同时使用指令融合、预测结构优化和对部分低性能/面积收益结构的面积/功耗优化；官方收益数字仍是指定比较口径。 |
 | AU21-10 | Qualcomm/Taishan 的未公开结构可由跑分推断 | **不支持** | 当前公开资料不足以建立同口径的 ROB/LSQ/端口/预测器数据；缺失保持 UNKNOWN。 |
+| AU21-11 | Cortex-A77 的“6 instructions/cycle dispatch”与 µOP 吞吐相同 | **不支持这种简化** | Arm A77 工程博客称最多 6 instructions/cycle；A77 软件优化指南细分为最多处理 6 MOPs/cycle、派发最多 10 µOPs/cycle。必须保留 MOP 与 µOP 的单位/阶段差异。 |
 
 ## 3. 方法与来源独立性
 
