@@ -3,7 +3,7 @@
 - **当前目标口径（2026-10-23）：** 复盘移动终端 SoC、特别是 CPU 的历史变化点、动因、收益、代价与瓶颈转移，并以此理解未来趋势；不以提出新技术立项为目标。见[第十八轮目标校正记录](research-transactions/round-18-2026-10-23.md)。
 
 - **[CPU 历史演进与因果分析框架](cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)**：明确变化时间线、动因证据、收益/代价、竞争解释与未来条件性参考。
-- **[移动 CPU 微架构历史变化时间线 v0.1](../03-analysis/移动CPU微架构历史变化时间线-v0.1-2026-10-23.md)** · [第十九轮来源审计](../02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md) · [事务19](research-transactions/round-19-2026-10-23.md)：初步时间线已建立，下一步核验发布日期/量产时间、核内机制证据与因果强度。 [核内来源卡](../02-evidence/sources/round-19-移动CPU核内微架构原始来源.md)。
+- **[移动 CPU 微架构历史变化时间线 v0.1](../03-analysis/移动CPU微架构历史变化时间线-v0.1-2026-10-23.md)** · [第十九轮来源审计](../02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md) · [事务19](research-transactions/round-19-2026-10-23.md)：初版历史节点与核内机制已建立；跨厂商路线和产品化日期由第二十轮补充。 [第十九轮核内来源卡](../02-evidence/sources/round-19-移动CPU核内微架构原始来源.md)。
 - **[第二十轮跨厂商路线与产品化时间 v0.2](../03-analysis/移动CPU跨厂商微架构路线与产品化时间-v0.2-2026-10-23.md)** · [路线/时间审计](../02-evidence/audits/round-20-cross-vendor-cpu-route-and-productization-audit-2026-10-23.md) · [来源卡](../02-evidence/sources/round-20-移动CPU跨厂商路线与产品化来源卡.md) · [事务20](research-transactions/round-20-2026-10-23.md)：已区分 CPU 核设计路线、SoC 层差异化与终端产品化日期；下一步逐核核验微架构机制。
 - [第十七轮初始来源筛选](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md) · [事务记录](research-transactions/round-17-2026-10-22.md)
 - [第十六轮事务记录](research-transactions/round-16-2026-10-22.md) · [第十五轮跨仓范围核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)
