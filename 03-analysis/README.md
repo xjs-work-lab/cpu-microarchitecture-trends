@@ -1,5 +1,10 @@
 # 分析推论
 
+## 当前研究主线（2026-10-23）
+
+当前优先任务不是提出新技术立项建议，而是建立[移动 CPU 历史变化与因果分析框架](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)，把每项变化与当时负载/约束、直接证据、收益、代价、瓶颈转移和后续影响联系起来。第十八轮目标校正见[事务记录](../00-project/research-transactions/round-18-2026-10-23.md)。
+
+
 **第十七轮初始来源筛选：** [CPU 微架构/LLVM Seed Discovery](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)。本轮只建立来源锚点与证据边界，尚未完成 ROB/LSQ、物理寄存器与移动缓存的覆盖审计。
 
 **新支线范围锁定：** [移动 CPU 微架构与 LLVM 深化支线](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)。目前已明确问题边界与领域地图，下一步才开始高质量来源筛选；尚未声称完成新的来源核验。
