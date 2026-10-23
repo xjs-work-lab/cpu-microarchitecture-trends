@@ -2,7 +2,7 @@
 
 - **当前目标口径（2026-10-23）：** 复盘移动终端 SoC、特别是 CPU 的历史变化点、动因、收益、代价与瓶颈转移，并以此理解未来趋势；不以提出新技术立项为目标。见[第十八轮目标校正记录](research-transactions/round-18-2026-10-23.md)。
 
-- **[CPU 微架构与 LLVM 深化支线范围锁定](cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)**：第十六轮定义了尚未系统覆盖的通用移动 CPU 核、寄存器/状态、内存层次与 LLVM 代码生成问题；下一步是小规模 seed discovery，不代表新来源已经核验。
+- **[CPU 历史演进与因果分析框架](cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)**：明确变化时间线、动因证据、收益/代价、竞争解释与未来条件性参考；下一步是建立 2007–2026 年 CPU 变化时间线。
 - [第十七轮初始来源筛选](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md) · [事务记录](research-transactions/round-17-2026-10-22.md)
 - [第十六轮事务记录](research-transactions/round-16-2026-10-22.md) · [第十五轮跨仓范围核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)
 
