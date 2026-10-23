@@ -1,6 +1,6 @@
 # 智能手机 SoC 整体架构演进｜技术洞察知识库
 
-> **当前状态（2026-10-23）：已按用户澄清校正研究目标。** 本项目要复盘移动终端 SoC、尤其 CPU 的历史变化点，解释变化动因、收益、代价与瓶颈转移，并据此理解未来趋势；不是以提出新技术立项为目标。第十七轮的 LLVM/SME/分支预测材料仅是初始种子；第十九轮建立了 CPU 历史变化时间线；第二十轮完成跨厂商路线与产品化时间审计；第二十一轮已归档逐核微架构机制证据矩阵 v0.1。下一步审计关键延迟/端口机制，并建立硬件机制与 LLVM 代码生成的桥接表。全 SoC v1.3 仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
+> **当前状态（2026-10-23）：已按用户澄清校正研究目标。** 本项目要复盘移动终端 SoC、尤其 CPU 的历史变化点，解释变化动因、收益、代价与瓶颈转移，并据此理解未来趋势；不是以提出新技术立项为目标。第十七轮的 LLVM/SME/分支预测材料仅是初始种子；第十九轮建立了 CPU 历史变化时间线；第二十轮完成跨厂商路线与产品化时间审计；第二十一轮已归档逐核微架构机制矩阵，第二十二轮已归档硬件机制—LLVM 代码生成桥接矩阵。下一步核验 LLVM 目标模型与手机 CPU 型号/版本的对应关系，并把软件利用路径回写历史因果时间线。全 SoC v1.3 仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
 
 仓名 `cpu-microarchitecture-trends` 沿用早期命名；项目研究对象是**智能手机完整 SoC/平台的 2007—2026 年演进及 2027—2028 年有条件前瞻**，并非只研究CPU。覆盖 CPU/GPU/DSP/NPU、ISP/编解码/显示、Modem-RF/天线、缓存/DRAM/互连、软件运行时、常驻感知/安全、电源域/封装/散热。严格区分**裸片、同封装/配套芯片、平台、手机整机和网络环境**。
 
@@ -13,6 +13,7 @@
 - **[第二十轮跨厂商微架构路线与产品化时间 v0.2](03-analysis/移动CPU跨厂商微架构路线与产品化时间-v0.2-2026-10-23.md)** — 比较 Apple、Qualcomm、Samsung、HiSilicon 与 MediaTek 的核设计路线，区分 IP、SoC、终端上市时间。
 - **[第二十轮路线/时间审计](02-evidence/audits/round-20-cross-vendor-cpu-route-and-productization-audit-2026-10-23.md)** · [来源卡](02-evidence/sources/round-20-移动CPU跨厂商路线与产品化来源卡.md) · [事务记录](00-project/research-transactions/round-20-2026-10-23.md)。
 - **[第二十一轮核内机制证据矩阵 v0.1](03-analysis/移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)** — 逐核比较前端/分支、乱序执行、执行资源、Load/Store、缓存与预取；[机制审计](02-evidence/audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)记录指标口径冲突与测量边界；[来源卡](02-evidence/sources/round-21-核内微架构机制原始来源卡.md) · [事务记录](00-project/research-transactions/round-21-2026-10-23.md)。
+- **[第二十二轮微架构—LLVM 代码生成桥接矩阵 v0.1](03-analysis/移动CPU微架构与LLVM代码生成桥接矩阵-v0.1-2026-10-23.md)** — 说明目标模型、调度、寄存器分配、向量化、PGO、预取和 SME/ZA 的软件利用路径；[桥接审计](02-evidence/audits/round-22-llvm-hardware-codegen-bridge-audit-2026-10-23.md)与[来源卡](02-evidence/sources/round-22-LLVM代码生成与调度模型原始来源卡.md) · [事务记录](00-project/research-transactions/round-22-2026-10-23.md)。
 
 - **[研究目的澄清与下一步框架（2026-10-23）](00-project/research-transactions/round-18-2026-10-23.md)** — 将 CPU 深化支线重新锚定在历史变化、动因、后果和未来趋势参考。
 - **[第十七轮 CPU 微架构/LLVM 初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)** — 官方 SME/ABI/LLVM 种子、分支预测研究与设备迁移边界。
