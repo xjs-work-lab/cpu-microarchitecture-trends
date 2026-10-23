@@ -24,7 +24,8 @@
 | 时期 | 可确认的变化点 | 为什么发生／当时的压力 | 直接后果、代价与后续影响 | 因果证据强度 |
 |---|---|---|---|---|
 | **2007–2011：从单核高性能转向乱序与多核扩展** | Cortex-A8 代表 Armv7-A、NEON、多媒体 SIMD 与双发射应用处理器阶段；2007 年公布的 Cortex-A9 引入部分乱序流水线，并提供最多四核的 MPCore 配置和硬件一致性管理。Arm 回顾资料称 A9 相对 A8 在相同功耗下有约 25% IPC 提升。 | 手机从基本通信扩展到网页、应用、多媒体与更丰富交互，单靠提高频率受到功耗约束。Arm 的回顾材料明确描述了性能需求上升以及设计者从提高 MHz 转向增加核心数的阶段性选择。 | 乱序执行可在依赖允许时挖掘指令级并行；多核提高可并行负载吞吐，但不会自动加速单线程，且增加面积、缓存一致性、调度和并行软件的复杂度。A9 的百分比是 Arm 回顾性陈述，不能视为统一独立基准。 | **B**：架构事实强；动因有回顾资料支持，定量收益不是独立归因。 |
-| **2011–2013（并行路线）：Qualcomm Krait 体现厂商定制 CPU 微架构** | Qualcomm 于 2011 年公布 Krait，面向下一代 Snapdragon，提供单核、双核和四核产品配置，并与 GPU、DSP、连接模块共同构成移动平台。 | Qualcomm 将其与更复杂的智能手机/平板负载联系起来，包括更大屏幕、更复杂 OS、多任务、HD 游戏和高清视频；这反映了性能、功耗与平台集成的竞争压力。 | Krait 说明移动 CPU 演进并非只有 Arm Cortex IP 一条路线，芯片厂商也会用自有微架构争取性能/能效差异化。Qualcomm 公告中“性能提升 150%、功耗降低 65%”是其自报比较，不应当作独立可比结果。 | **A（厂商目标）/C（收益幅度）**：定制路线和配置明确，量化收益需独立验证。 |\n| **2011–2016：big.LITTLE 把“峰值性能”和“日常能耗”分开优化** | Cortex-A15/A7 等高性能核与高能效核组合，通过异构集群和软件调度，让不同任务在不同能效区间执行。2012 年后 A57/A53 延续这一思路。Apple 的 A10 Fusion（2016）后来也公开采用 2 个性能核加 2 个高能效核，说明异构 CPU 并非单一厂商路线。 | 手机负载是间歇的：网页/游戏可能短时高强度，消息、音频和后台任务则更轻；电池容量和可散热功率有限。Arm 对 big.LITTLE 的说明直接把这种负载差异与电池寿命目标联系起来。 | 同一 SoC 可以兼顾突发性能与低负载能效；代价是异构调度、任务迁移、缓存/一致性和功耗管理更复杂。Arm 宣称特定常见负载下平均应用处理器功耗可降低“最高 70%”，应保留为厂商条件性声明，不能泛化到所有应用/手机。 | **A/B**：设计动因明确；实际收益高度依赖负载、调度器和实现。 |
+| **2011–2013（并行路线）：Qualcomm Krait 体现厂商定制 CPU 微架构** | Qualcomm 于 2011 年公布 Krait，面向下一代 Snapdragon，提供单核、双核和四核产品配置，并与 GPU、DSP、连接模块共同构成移动平台。 | Qualcomm 将其与更复杂的智能手机/平板负载联系起来，包括更大屏幕、更复杂 OS、多任务、HD 游戏和高清视频；这反映了性能、功耗与平台集成的竞争压力。 | Krait 说明移动 CPU 演进并非只有 Arm Cortex IP 一条路线，芯片厂商也会用自有微架构争取性能/能效差异化。Qualcomm 公告中“性能提升 150%、功耗降低 65%”是其自报比较，不应当作独立可比结果。 | **A（厂商目标）/C（收益幅度）**：定制路线和配置明确，量化收益需独立验证。 |
+| **2011–2016：big.LITTLE 把“峰值性能”和“日常能耗”分开优化** | Cortex-A15/A7 等高性能核与高能效核组合，通过异构集群和软件调度，让不同任务在不同能效区间执行。2012 年后 A57/A53 延续这一思路。Apple 的 A10 Fusion（2016）后来也公开采用 2 个性能核加 2 个高能效核，说明异构 CPU 并非单一厂商路线。 | 手机负载是间歇的：网页/游戏可能短时高强度，消息、音频和后台任务则更轻；电池容量和可散热功率有限。Arm 对 big.LITTLE 的说明直接把这种负载差异与电池寿命目标联系起来。 | 同一 SoC 可以兼顾突发性能与低负载能效；代价是异构调度、任务迁移、缓存/一致性和功耗管理更复杂。Arm 宣称特定常见负载下平均应用处理器功耗可降低“最高 70%”，应保留为厂商条件性声明，不能泛化到所有应用/手机。 | **A/B**：设计动因明确；实际收益高度依赖负载、调度器和实现。 |
 | **2012–2015：64 位从架构路线进入手机产品** | Armv8-A 和 Cortex-A53/A57 引入 AArch64，并兼顾当时的 32 位软件生态；Apple A7 于 2013 年进入 iPhone 5s，Apple 同时强调 iOS 7 与系统应用针对 64 位设计。 | 更大的地址空间、系统软件能力、长期应用性能与架构演进是推动因素。Arm 明确提及更大物理地址空间及虚拟化等能力；Apple 则把 64 位作为整机软件和应用生态升级的一部分。不能将转向 64 位简化为“因为手机内存超过 4GB”。 | 64 位不仅是地址宽度变化，也改变寄存器/调用约定、编译器、ABI、系统库和应用发布链路。潜在收益依具体代码而异；更宽指针也可能增加部分数据结构的内存占用。Apple A7 的微架构拆解显示其强调较宽的乱序执行资源，但具体宽度/ROB 数字属于第三方逆向估计，不是 Apple 官方披露。 | **A/B**：产品与 ISA 变化明确；不同收益需按软件和负载分别验证。 |
 | **2015–2017：持续性能、能效和面积效率成为核心设计目标** | Cortex-A72 面向高端手机并针对 16nm FinFET+ 等工艺；Cortex-A73 强调更小面积、能效和持续性能。Arm 公开把复杂相机/视频、游戏、较大显示和常驻传感等体验与严格的手机功耗/热预算联系起来。 | 用户需求不再只是短时跑分：高分辨率影像、游戏、多应用和常驻功能带来更复杂的混合负载；无风扇机身需要控制表面温度和长期功耗。 | 设计目标从单纯提高峰值，转向在给定功耗/面积下保持更高的持续性能。Arm 对 A72/A73 的能效与性能百分比是其目标配置下的厂商声明；由于同时涉及微架构、制程和 SoC/手机实现，不能把代际差异全部归因于 CPU 微架构。 | **A/B**：热/能效目标有直接资料；单项技术的独立贡献仍不明。 |
 | **2016–2018：异构核设计从“两个集群”走向更灵活的集群组织** | Arm 于 2017 年公布 DynamIQ，将 big 与 LITTLE 核组合在同一集群设计框架中，并通过 DynamIQ Shared Unit 提供集群级共享资源；它扩展了核心组合和集群配置选择。 | 核心类型、并发任务和计算密度持续增加，SoC 需要更灵活地组合不同性能/能效的核。Arm 将 DynamIQ 与持续增长的计算需求、AI 等新负载联系起来。 | 更灵活的异构配置为调度、共享缓存和集群扩展提供了新的实现空间；实际收益仍依赖 SoC 采用的核组合、缓存/互连配置与 OS 调度。DynamIQ 是可配置的 IP/集群技术，不代表所有手机都采用相同物理拓扑。 | **A/B**：设计意图直接公开；各产品实际收益与拓扑须逐款核对。 |
@@ -132,17 +133,24 @@ CPU 仍承担 OS、应用控制流、调度与大量通用代码；GPU/NPU 继�
 - [Apple：A19 与性能核/能效核配置（2025）](https://www.apple.com/uk/iphone-17/specs/)
 
 ### Arm：持续性能、DynamIQ、Cortex-X、Armv9
-- [Arm Cortex-A72 与高端移动体验（2015）](https://www.arm.com/company/news/2015/02/arm-sets-new-standard-for-the-premium-mobile-experience)\n- [Arm Cortex-A72 核内微架构改进详解（2015）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/a-walk-through-of-the-microarchitectural-improvements-in-cortex-a72)
+- [Arm Cortex-A72 与高端移动体验（2015）](https://www.arm.com/company/news/2015/02/arm-sets-new-standard-for-the-premium-mobile-experience)
+- [Arm Cortex-A72 核内微架构改进详解（2015）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/a-walk-through-of-the-microarchitectural-improvements-in-cortex-a72)
 - [Arm Cortex-A73：持续性能与能效（2016）](https://www.arm.com/company/news/2016/05/latest-arm-premium-mobile-technology-to-drive-immersive-experiences)
 - [Arm DynamIQ 公告（2017）](https://newsroom.arm.com/news/arm-dynamiq-expanding-the-possibilities-for-artificial-intelligence)
-- [Arm Cortex-A76 与移动/客户端性能（2018）](https://www.arm.com/ja/company/news/2018/05/arm-announces-new-suite-of-ip-for-premium-mobile-experiences)\n- [Arm Cortex-A76 核内微架构详解（2018）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/cortex-a76-laptop-class-performance-with-mobile-efficiency)\n- [Arm Cortex-A77 核内微架构详解（2019）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/new-arm-cortex-a77-provides-compute-performance-leadership)\n- [Arm Cortex-A78 核内微架构详解（2020）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/arm-cortex-a78-cpu)
+- [Arm Cortex-A76 与移动/客户端性能（2018）](https://www.arm.com/ja/company/news/2018/05/arm-announces-new-suite-of-ip-for-premium-mobile-experiences)
+- [Arm Cortex-A76 核内微架构详解（2018）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/cortex-a76-laptop-class-performance-with-mobile-efficiency)
+- [Arm Cortex-A77 核内微架构详解（2019）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/new-arm-cortex-a77-provides-compute-performance-leadership)
+- [Arm Cortex-A78 核内微架构详解（2020）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/arm-cortex-a78-cpu)
 - [Arm Cortex-A78 与 Cortex-X1（2020）](https://newsroom.arm.com/news/new-arm-ip-delivers-true-digital-immersion-for-the-5g-era)
 - [Arm：未来 Cortex-A big 核转向 64 位（2020 公告）](https://newsroom.arm.com/news/pushing-the-boundaries-of-performance-and-security-to-unleash-the-power-of-64-bit-computing)
 - [Arm Cortex-A715（2022）](https://www.arm.com/products/silicon-ip-cpu/cortex-a/cortex-a715)
 - [Arm Cortex-A720（2023）](https://www.arm.com/products/silicon-ip-cpu/cortex-a/cortex-a720)
 - [Arm Cortex-X925 的 IPC 说明（2024，厂商基准声明）](https://newsroom.arm.com/blog/armv9-cortex-x925-cpu-performance)
 
-### Qualcomm：定制 CPU 路线与平台集成\n- [Qualcomm Krait 新一代 Snapdragon CPU 微架构公告（2011）](https://www.qualcomm.com/news/releases/2011/02/qualcomm-announces-next-generation-snapdragon-mobile-chipset-family)\n\n### 2023–2026：全大核、定制核与 CPU 侧 AI
+### Qualcomm：定制 CPU 路线与平台集成
+- [Qualcomm Krait 新一代 Snapdragon CPU 微架构公告（2011）](https://www.qualcomm.com/news/releases/2011/02/qualcomm-announces-next-generation-snapdragon-mobile-chipset-family)
+
+### 2023–2026：全大核、定制核与 CPU 侧 AI
 - [MediaTek Dimensity 9300：All-Big-Core 配置（2023）](https://www.mediatek.com/press-room/mediateks-new-all-big-core-design-for-flagship-dimensity-9300-chipset-maximizes-smartphone-performance-and-efficiency)
 - [MediaTek Dimensity 9400：第二代 All-Big-Core 配置（2024）](https://www.mediatek.com/press-room/mediateks-dimensity-9400-flagship-soc-offers-extreme-performance-and-efficiency-for-the-latest-ai-experiences)
 - [Qualcomm：Snapdragon 8 Elite 与 Oryon（2024）](https://www.qualcomm.com/news/releases/2024/10/qualcomm-unveils-snapdragon-8-elite-with-the-world-s-fastest-mobile-cpu)
