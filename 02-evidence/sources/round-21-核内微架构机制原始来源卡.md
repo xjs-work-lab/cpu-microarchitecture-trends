@@ -31,8 +31,8 @@
 ## SRC21-04 — Arm Cortex-A77：前端带宽、乱序窗口与访存并行度
 
 - **来源：** [Arm：New Cortex-A77 CPU continues path towards compute performance leadership](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/new-arm-cortex-a77-provides-compute-performance-leadership)；[Cortex-A77 Software Optimization Guide, Issue 4.0](https://documentation-service.arm.com/static/64adbc3e38511951cb79e6d4?token=)
-- **来源类型：** Arm 官方工程博客。
-- **[FACT] 直接披露：** 分支预测带宽翻倍；L1 BTB 容量为前代的 4 倍、L2 BTB 增大 33%；新增 Macro-op Cache；dispatch 带宽增加 50%，最多 6 instructions/cycle；乱序窗口扩大 25% 至 160 instructions；整数执行带宽增加 50%；in-flight loads/stores 窗口增加 25%；专用 load-store issue 带宽翻倍；预取器可按内存子系统配置和集群利用率动态调整行为。
+- **来源类型：** Arm 官方工程博客与软件优化指南。
+- **[FACT] 直接披露：** 分支预测带宽翻倍；L1 BTB 容量为前代的 4 倍、L2 BTB 增大 33%；新增 Macro-op Cache；工程博客称 dispatch 带宽增加 50%、最多 6 instructions/cycle；软件优化指南进一步区分最多处理 6 MOPs/cycle、派发最多 10 µOPs/cycle；乱序窗口扩大 25% 至 160 instructions；整数执行带宽增加 50%；in-flight loads/stores 窗口增加 25%；专用 load-store issue 带宽翻倍；预取器可按内存子系统配置和集群利用率动态调整行为。
 - **设计意义：** 同时扩大前端供给、后端窗口和访存并行度，避免只加宽某一段后被其他阶段卡住。
 - **边界：** 160 是 Arm 对 out-of-order window 的表述，不在此处重命名为 ROB entries；相对 A76 的百分比属于厂商口径。
 
