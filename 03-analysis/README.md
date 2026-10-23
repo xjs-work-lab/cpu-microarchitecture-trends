@@ -2,12 +2,12 @@
 
 ## 当前研究主线（2026-10-23）
 
-当前优先任务不是提出新技术立项建议，而是建立[移动 CPU 历史变化与因果分析框架](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)，把每项变化与当时负载/约束、直接证据、收益、代价、瓶颈转移和后续影响联系起来。第十八轮目标校正见[事务记录](../00-project/research-transactions/round-18-2026-10-23.md)。
+当前优先任务不是提出新技术立项建议，而是复盘移动 CPU 历史变化、解释动因和后果。已建立[移动 CPU 微架构历史变化时间线 v0.1](移动CPU微架构历史变化时间线-v0.1-2026-10-23.md)，对应的[初始来源审计](../02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)列出来源与外推边界。范围和方法见[历史演进与因果分析框架](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)，目标校正见[第十八轮事务](../00-project/research-transactions/round-18-2026-10-23.md)，本轮记录见[第十九轮事务](../00-project/research-transactions/round-19-2026-10-23.md)。
 
 
-**第十七轮初始来源筛选：** [CPU 微架构/LLVM Seed Discovery](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)。本轮只建立来源锚点与证据边界，尚未完成 ROB/LSQ、物理寄存器与移动缓存的覆盖审计。
+**第十七轮初始来源筛选（辅助机制来源）：** [CPU 微架构/LLVM Seed Discovery](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)。这些资料应放回历史节点解释软硬件关系，不作为当前研究主线。
 
-**新支线范围锁定：** [移动 CPU 微架构与 LLVM 深化支线](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)。目前已明确问题边界与领域地图，下一步才开始高质量来源筛选；尚未声称完成新的来源核验。
+**历史因果框架：** [移动 CPU 微架构历史演进与 LLVM 机制深化](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)。当前重点是历史变化点、动因、收益/代价与瓶颈转移，不是新的技术立项筛选。
 
 
 **跨项目 CPU/LLVM 专项入口：** [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md) · [Round15F CPU/LLVM机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。该项目已在公开证据范围内结题；本仓只引用，不复制其证据对象或重启宽泛研究。
