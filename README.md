@@ -1,6 +1,6 @@
 # 智能手机 SoC 整体架构演进｜技术洞察知识库
 
-> **当前状态（2026-10-23）：已按用户澄清校正研究目标。** 本项目要复盘移动终端 SoC、尤其 CPU 的历史变化点，解释变化动因、收益、代价与瓶颈转移，并据此理解未来趋势；不是以提出新技术立项为目标。第十七轮的 LLVM/SME/分支预测材料仅是初始种子；第十九轮已建立 CPU 历史变化时间线 v0.1 和初始来源审计，下一步核验各节点的发布/量产时间、微架构事实与因果强度。全 SoC v1.3 仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
+> **当前状态（2026-10-23）：已按用户澄清校正研究目标。** 本项目要复盘移动终端 SoC、尤其 CPU 的历史变化点，解释变化动因、收益、代价与瓶颈转移，并据此理解未来趋势；不是以提出新技术立项为目标。第十七轮的 LLVM/SME/分支预测材料仅是初始种子；第十九轮建立了 CPU 历史变化时间线；第二十轮已完成跨厂商路线与产品化时间审计，并回写主时间线。下一步建立逐核微架构机制证据矩阵。全 SoC v1.3 仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
 
 仓名 `cpu-microarchitecture-trends` 沿用早期命名；项目研究对象是**智能手机完整 SoC/平台的 2007—2026 年演进及 2027—2028 年有条件前瞻**，并非只研究CPU。覆盖 CPU/GPU/DSP/NPU、ISP/编解码/显示、Modem-RF/天线、缓存/DRAM/互连、软件运行时、常驻感知/安全、电源域/封装/散热。严格区分**裸片、同封装/配套芯片、平台、手机整机和网络环境**。
 
@@ -10,6 +10,8 @@
 - **[第十九轮初始来源审计](02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)** — 将官方/技术来源映射到历史主张，并明确厂商声明、第三方逆向和未知边界。
 - **[第十九轮移动 CPU 核内微架构来源卡](02-evidence/sources/round-19-移动CPU核内微架构原始来源.md)** — A9、Krait、A72、A76、A77/A78、Apple Cyclone 的具体核内变化证据。
 - **[第十九轮事务记录](00-project/research-transactions/round-19-2026-10-23.md)** — 本轮完成项、限制与下一步。
+- **[第二十轮跨厂商微架构路线与产品化时间 v0.2](03-analysis/移动CPU跨厂商微架构路线与产品化时间-v0.2-2026-10-23.md)** — 比较 Apple、Qualcomm、Samsung、HiSilicon 与 MediaTek 的核设计路线，区分 IP、SoC、终端上市时间。
+- **[第二十轮路线/时间审计](02-evidence/audits/round-20-cross-vendor-cpu-route-and-productization-audit-2026-10-23.md)** · [来源卡](02-evidence/sources/round-20-移动CPU跨厂商路线与产品化来源卡.md) · [事务记录](00-project/research-transactions/round-20-2026-10-23.md)。
 
 - **[研究目的澄清与下一步框架（2026-10-23）](00-project/research-transactions/round-18-2026-10-23.md)** — 将 CPU 深化支线重新锚定在历史变化、动因、后果和未来趋势参考。
 - **[第十七轮 CPU 微架构/LLVM 初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)** — 官方 SME/ABI/LLVM 种子、分支预测研究与设备迁移边界。
