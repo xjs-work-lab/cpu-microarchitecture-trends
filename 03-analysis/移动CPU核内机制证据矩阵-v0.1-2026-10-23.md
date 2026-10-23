@@ -93,3 +93,24 @@
 2. 从 Arm TRM/优化指南和 Apple/Samsung 可复现实验中继续补充可核验的寄存器重命名、load-use 延迟、执行端口和分支误预测相关机制。
 3. 把“微架构能力”与编译器/LLVM 实际能否利用分开记录，避免将理论带宽直接转成编译收益。
 4. 完成关键代际的机制矩阵后，再更新历史因果叙事与 2027–2028 条件性判断。
+
+## 7. LLVM 23.1.4 软件利用路径交叉索引（第23轮补充）
+
+此表仅说明固定版本源码中存在何种软件路径；不代表这些路径已在某款手机产品上触发或带来可量化收益。完整源码与 SHA 见[LLVM 23.1.4 代码生成优化入口审计](LLVM-23.1.4-代码生成优化入口审计-v0.1-2026-10-23.md)及[目标调度模型核验](LLVM-23.1.4-AArch64-目标调度模型核验-v0.1-2026-10-23.md)。
+
+| 核内机制 | LLVM 可见/可调路径 | 证据类别 | 当前结论 |
+|---|---|---|---|
+| 前端融合、指令供给 | Processor tuning features 中的 fusion 相关开关、指令选择/peephole | MODEL_FACT | 存在目标特定启发式；不代表 LLVM 完整模拟 µop cache、BTB 或实际前端带宽 |
+| 分支预测与热路径 | PGO 权重、基本块布局/聚类 | PROFILE_PATH | 编译器可利用分支频率；不直接读取预测器内部状态 |
+| 执行端口、指令延迟 | Scheduler model 的 latency/resource/issue 参数，MachineScheduler | MODEL_PATH | 可以根据模型调度指令；模型共享、经验参数与乐观值限制精度 |
+| 乱序窗口、ROB/LSQ | 间接通过依赖链、展开、调度暴露 ILP/MLP | INDIRECT_ONLY | LLVM 不知道运行时 ROB/LSQ 占用，也不能保证实际窗口被填满 |
+| 架构寄存器与隐藏 PRF | Live interval、寄存器分配、寄存器压力调度、spill/reload | DIRECT_SOFTWARE_PATH | LLVM 管理 ISA 可见寄存器与 spill slot，不管理硬件内部 rename PRF |
+| SIMD/向量执行资源 | ISA feature、Loop/SLP vectorizer、VF/IC 成本模型 | DIRECT_FEATURE_PLUS_COST_MODEL | 需合法性、成本模型与寄存器压力共同成立；无端到端手机收益数据 |
+| Cache/TLB/预取 | 静态访问模式、别名分析、prefetch hint | LIMITED_HINT | 编译器不能静态知道真实 hit/miss、DRAM 争用或动态预取器状态 |
+| SME/ZA 架构状态 | Clang 属性、LLVM IR function attributes、ABI/call boundary lowering | DIRECT_ABI_PATH | 架构状态可进入软件契约；手机端转换开销/能耗未知 |
+
+### 因果解释应如何写
+- **可直接确认：** 目标 ISA feature、LLVM tuning feature、编译器实现入口与 ABI 属性。
+- **可谨慎推论：** 某项机制为优化提供了可能的软件路径，或者某个模型共享可能限制目标特异性。
+- **仍未知：** 实际手机的代码生成选择、动态微架构行为、持续性能与净能耗收益。
+- 不应写成“LLVM 已充分利用了该硬件能力”，除非有目标构建配置、生成汇编/优化记录以及匹配 workload 的验证证据。
