@@ -34,6 +34,11 @@
 | S19-17 | [Arm CSS for Mobile 2/C2 公告](https://newsroom.arm.com/news/arm-css-for-mobile-2-agentic-ai-mobile-graphics)；[C2 CPU 集群资料](https://www.arm.com/products/silicon-ip-cpu/c2-cpu-cluster) | 2026 年公开提出的 C2-Ultra/C2-Pro 与双 SME2 集群，以及 CPU 协调持续 AI 工作流的设计叙述 | Arm 官方平台/产品资料 | 设计公告不自动证明终端长期收益；厂商内部测试数据尚非独立复验 |
 | S19-18 | [MediaTek Dimensity 9600 Pro 公告](https://www.mediatek.com/press-room/mediatek-dimensity-9600-pro-sets-new-standard-for-flagship-smartphone-chips)；[规格页](https://www.mediatek.com/products/smartphones/mediatek-dimensity-9600-pro) | 2026 年 2× C2-Ultra + 6× C2-Pro 配置、缓存与内存平台公开信息 | MediaTek 官方产品公告/规格页 | 代际性能/功耗百分比为厂商声明；不能只凭单款产品确定“全大核”是否成为行业主流 |
 
+| S19-19 | [Qualcomm Krait 新一代 Snapdragon CPU 微架构公告（2011）](https://www.qualcomm.com/news/releases/2011/02/qualcomm-announces-next-generation-snapdragon-mobile-chipset-family) | Krait 作为 Qualcomm 新一代 CPU 微架构路线、单/双/四核配置，以及与更复杂移动负载的产品定位 | Qualcomm 官方公告 | 性能提升 150%、功耗降低 65% 是厂商自报比较；不能当作独立统一测试，也不能由此推出与 Cortex 同条件胜负 |
+| S19-20 | [Arm Cortex-A72 核内微架构改进详解（2015）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/a-walk-through-of-the-microarchitectural-improvements-in-cortex-a72) | A72 的 3-wide decode/8-wide issue、5-wide dispatch、分支预测、寄存器文件功耗优化、预取、load/store buffer 与 TLB 改进等直接披露 | Arm 工程博客/核内设计说明 | 性能和能效收益属于 Arm 指定配置/测试口径；不能把超过 50% 内存带宽等数字外推为所有 SoC/负载结果 |
+| S19-21 | [Arm Cortex-A76 核内微架构详解（2018）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/cortex-a76-laptop-class-performance-with-mobile-efficiency) | A76 4-wide decode、分离分支预测与取指、每周期取指/dispatch能力、双 128-bit SIMD/FP 吞吐和更深 memory-level parallelism | Arm 工程博客/核内设计说明 | 不证明每个量产 SoC 都使用相同缓存、频率和物理实现；跨代性能提升也受到工艺与系统配置影响 |
+| S19-22 | [Arm Cortex-A77 微架构说明](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/new-arm-cortex-a77-provides-compute-performance-leadership)；[Arm Cortex-A78 微架构说明](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/arm-cortex-a78-cpu) | A77 的 MOP cache、分支预测带宽/BTB、dispatch/乱序窗口改进；A78 对同热功耗预算下持续性能和结构功耗效率的设计说明 | Arm 工程博客/核内设计说明 | 不能由 MOP cache 存在推断所有代码都命中；20% 持续性能为 Arm 指定比较口径，不等于跨手机独立实测 |
+
 ## 3. 初步审计结论
 
 1. **架构/产品事实：** 早期乱序/多核、big.LITTLE、Armv8-A 64 位、DynamIQ、A76/A78/X1 分层、All-Big-Core、Oryon、C1/SME2、C2 等节点均有可定位的官方或技术来源。
