@@ -42,7 +42,7 @@
 
 ## 2.1 公开资料能够直接验证的核内微架构变化
 
-逐核机制的第一版归一矩阵见[移动 CPU 核内机制证据矩阵 v0.1](移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)，其[第二十一轮机制审计](../02-evidence/audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)专门记录了 A72 dispatch 口径冲突、Apple Firestorm 队列术语差异和 Samsung 跨代数据的仿真边界。以下案例用于说明历史时间线，不替代逐项机制审计。
+逐核机制的第一版归一矩阵见[移动 CPU 核内机制证据矩阵 v0.1](移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)，其[第二十一轮机制审计](../02-evidence/audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)专门记录了 A72 dispatch 口径冲突、Apple Firestorm 队列术语差异和 Samsung 跨代数据的仿真边界。以下案例用于说明历史时间线，不替代逐项机制审计。 已完成的软件利用路径梳理见[移动 CPU 微架构—LLVM 代码生成桥接矩阵 v0.1](移动CPU微架构与LLVM代码生成桥接矩阵-v0.1-2026-10-23.md)，对应[第二十二轮桥接审计](../02-evidence/audits/round-22-llvm-hardware-codegen-bridge-audit-2026-10-23.md)明确哪些机制可由 LLVM 直接利用、哪些仅通过模型或 profile 间接利用，以及哪些仍需真实手机证据。
 
 这组案例是时间线里最有价值的深化部分：不仅看产品名、核心数或最高频率，也看前端、分支预测、执行宽度、寄存器/队列和内存子系统怎样变化。以下仅记录有公开原始资料支撑的部分。
 
