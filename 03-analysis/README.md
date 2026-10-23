@@ -2,7 +2,7 @@
 
 ## 当前研究主线（2026-10-23）
 
-当前优先任务不是提出新技术立项建议，而是复盘移动 CPU 历史变化、解释动因和后果。已建立[移动 CPU 微架构历史变化时间线 v0.1](移动CPU微架构历史变化时间线-v0.1-2026-10-23.md)，对应的[初始来源审计](../02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)列出来源与外推边界。范围和方法见[历史演进与因果分析框架](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)，目标校正见[第十八轮事务](../00-project/research-transactions/round-18-2026-10-23.md)，本轮记录见[第十九轮事务](../00-project/research-transactions/round-19-2026-10-23.md)。
+当前优先任务不是提出新技术立项建议，而是复盘移动 CPU 历史变化、解释动因和后果。已建立[移动 CPU 微架构历史变化时间线 v0.1](移动CPU微架构历史变化时间线-v0.1-2026-10-23.md)，对应的[初始来源审计](../02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)列出来源与外推边界。 核内细节见[第十九轮来源卡](../02-evidence/sources/round-19-移动CPU核内微架构原始来源.md)。范围和方法见[历史演进与因果分析框架](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)，目标校正见[第十八轮事务](../00-project/research-transactions/round-18-2026-10-23.md)，本轮记录见[第十九轮事务](../00-project/research-transactions/round-19-2026-10-23.md)。
 
 
 **第十七轮初始来源筛选（辅助机制来源）：** [CPU 微架构/LLVM Seed Discovery](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)。这些资料应放回历史节点解释软硬件关系，不作为当前研究主线。
