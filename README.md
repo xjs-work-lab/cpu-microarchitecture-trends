@@ -8,6 +8,7 @@
 
 - **[移动 CPU 微架构历史变化时间线 v0.1](03-analysis/移动CPU微架构历史变化时间线-v0.1-2026-10-23.md)** — 按时间梳理主要转折、动因、收益、代价和未来参考。
 - **[第十九轮初始来源审计](02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)** — 将官方/技术来源映射到历史主张，并明确厂商声明、第三方逆向和未知边界。
+- **[第十九轮移动 CPU 核内微架构来源卡](02-evidence/sources/round-19-移动CPU核内微架构原始来源.md)** — A9、Krait、A72、A76、A77/A78、Apple Cyclone 的具体核内变化证据。
 - **[第十九轮事务记录](00-project/research-transactions/round-19-2026-10-23.md)** — 本轮完成项、限制与下一步。
 
 - **[研究目的澄清与下一步框架（2026-10-23）](00-project/research-transactions/round-18-2026-10-23.md)** — 将 CPU 深化支线重新锚定在历史变化、动因、后果和未来趋势参考。
