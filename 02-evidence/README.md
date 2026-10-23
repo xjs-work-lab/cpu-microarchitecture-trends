@@ -6,6 +6,8 @@
 - [第十九轮移动 CPU 核内微架构原始来源卡](sources/round-19-移动CPU核内微架构原始来源.md)：收录 A9、Krait、A72、A76、A77/A78、Apple Cyclone 的核内机制资料和外推限制。
 - [第二十轮跨厂商 CPU 路线与产品化来源卡](sources/round-20-移动CPU跨厂商路线与产品化来源卡.md)：区分自研核、半定制核、Cortex IP 与 CSS 集成，并核对关键 SoC/手机日期。
 - [第二十轮路线与产品化时间审计](audits/round-20-cross-vendor-cpu-route-and-productization-audit-2026-10-23.md)：汇总主张核验、来源层级、因果强度与公开资料边界。
+- [第二十一轮核内机制证据审计](audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)：逐项审计 A72 dispatch 口径、Apple Firestorm 队列术语、Samsung 模拟数据与各厂商公开披露边界。
+- [第二十一轮核内微架构机制原始来源卡](sources/round-21-核内微架构机制原始来源卡.md)：Arm A9/A72/A76/A77/A78、Apple Cyclone/Firestorm、Samsung Exynos M1–M6 的原始来源与边界。
 
 - [第十七轮 CPU 微架构/LLVM 初始来源筛选](audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)：官方 SME/ABI/LLVM 机制种子、分支预测候选论文及移动适用性边界。
 
