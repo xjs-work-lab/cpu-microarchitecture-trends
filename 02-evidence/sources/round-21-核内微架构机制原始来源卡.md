@@ -17,7 +17,7 @@
 - **来源：** [Arm：A walk through of the microarchitectural improvements in Cortex-A72](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/a-walk-through-of-the-microarchitectural-improvements-in-cortex-a72)；[Cortex-A72 Software Optimization Guide](https://documentation-service.arm.com/static/5ed75eeeca06a95ce53f93c7)
 - **来源类型：** Arm 工程博客与软件优化指南。
 - **[FACT] 工程博客直接披露：** 3-wide decode、8-wide issue 描述；更宽的 dispatch 描述（博客称最多 5 个指令/µops 每周期送往执行流水线）；分支预测器改进；I-cache tag lookup、TLB/micro-BTB、寄存器文件功耗优化、commit queue、FP 延迟、load/store buffer、L1/L2 预取与 L2 TLB 改进。
-- **重要来源口径冲突：** 软件优化指南“Dispatch Constraints”章节又称从顺序段送入乱序段的 dispatch stage 在其定义和约束下最多处理 3 µops/cycle。两份 Arm 文档对“dispatch”所指阶段/计量口径并不显然一致。本研究暂不将“5”与“3”视为同一个可比指标，也不自行裁定哪一项错误；后续若需使用数值，须进一步定位文档版本、阶段定义和约束上下文。
+- **重要来源术语/计量歧义：** 软件优化指南“Dispatch Constraints”章节又称从顺序段送入乱序段的 dispatch stage 在其定义和约束下最多处理 3 µops/cycle。工程博客则写作“5 instructions (micro-ops) per cycle”。由于 A77 的官方软件优化指南明确区分每周期处理的 MOP 数和派发的 µOP 数，A72 两份来源可能存在术语使用不精确或阶段定义不同的情况；当前仍无法证明两者指同一计量项。因此不将“5”与“3”视为可比指标，也不裁定哪项错误。
 - **[CLAIM] 收益边界：** 同功耗/性能百分比属于 Arm 指定配置和测试口径；不能拆分为某一单独结构的因果贡献。
 
 ## SRC21-03 — Arm Cortex-A76：前端解耦与执行资源扩展
@@ -30,7 +30,7 @@
 
 ## SRC21-04 — Arm Cortex-A77：前端带宽、乱序窗口与访存并行度
 
-- **来源：** [Arm：New Cortex-A77 CPU continues path towards compute performance leadership](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/new-arm-cortex-a77-provides-compute-performance-leadership)
+- **来源：** [Arm：New Cortex-A77 CPU continues path towards compute performance leadership](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/new-arm-cortex-a77-provides-compute-performance-leadership)；[Cortex-A77 Software Optimization Guide, Issue 4.0](https://documentation-service.arm.com/static/64adbc3e38511951cb79e6d4?token=)
 - **来源类型：** Arm 官方工程博客。
 - **[FACT] 直接披露：** 分支预测带宽翻倍；L1 BTB 容量为前代的 4 倍、L2 BTB 增大 33%；新增 Macro-op Cache；dispatch 带宽增加 50%，最多 6 instructions/cycle；乱序窗口扩大 25% 至 160 instructions；整数执行带宽增加 50%；in-flight loads/stores 窗口增加 25%；专用 load-store issue 带宽翻倍；预取器可按内存子系统配置和集群利用率动态调整行为。
 - **设计意义：** 同时扩大前端供给、后端窗口和访存并行度，避免只加宽某一段后被其他阶段卡住。
