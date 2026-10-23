@@ -41,6 +41,8 @@
 | S19-21 | [Arm Cortex-A76 核内微架构详解（2018）](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/cortex-a76-laptop-class-performance-with-mobile-efficiency) | A76 4-wide decode、分离分支预测与取指、每周期取指/dispatch能力、双 128-bit SIMD/FP 吞吐和更深 memory-level parallelism | Arm 工程博客/核内设计说明 | 不证明每个量产 SoC 都使用相同缓存、频率和物理实现；跨代性能提升也受到工艺与系统配置影响 |
 | S19-22 | [Arm Cortex-A77 微架构说明](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/new-arm-cortex-a77-provides-compute-performance-leadership)；[Arm Cortex-A78 微架构说明](https://developer.arm.com/community/arm-community-blogs/b/architectures-and-processors-blog/posts/arm-cortex-a78-cpu) | A77 的 MOP cache、分支预测带宽/BTB、dispatch/乱序窗口改进；A78 对同热功耗预算下持续性能和结构功耗效率的设计说明 | Arm 工程博客/核内设计说明 | 不能由 MOP cache 存在推断所有代码都命中；20% 持续性能为 Arm 指定比较口径，不等于跨手机独立实测 |
 
+| S19-23 | [Arm Cortex-A78 Core Technical Reference Manual](https://documentation-service.arm.com/static/64bea12b38511951cb7a0ee8)，Issue 09（2023） | 指令取指、动态分支预测、1.5K-entry L0 Macro-OP cache、寄存器重命名、issue queues 与乱序执行的公开技术描述 | Arm 非保密技术参考手册 | 文档说明 A78，不自动证明相较 A77 的全部新增项；实现选项需按具体配置核对 |
+
 ## 3. 初步审计结论
 
 1. **架构/产品事实：** 早期乱序/多核、big.LITTLE、Armv8-A 64 位、DynamIQ、A76/A78/X1 分层、All-Big-Core、Oryon、C1/SME2、C2 等节点均有可定位的官方或技术来源。
