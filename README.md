@@ -1,12 +1,12 @@
 # 智能手机 SoC 整体架构演进｜技术洞察知识库
 
-> **当前状态（2026-10-22）：第十七轮已完成移动 CPU 微架构/LLVM 初始来源筛选。** 官方 LLVM/AAPCS64 来源已提供可核验的 SME/ZA 状态、ABI 与 spill/reload 机制；分支预测论文目前主要是客户端高性能核心证据，手机核心直接覆盖仍不足。全 SoC 报告仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
+> **当前状态（2026-10-23）：已按用户澄清校正研究目标。** 本项目要复盘移动终端 SoC、尤其 CPU 的历史变化点，解释变化动因、收益、代价与瓶颈转移，并据此理解未来趋势；不是以提出新技术立项为目标。第十七轮的 LLVM/SME/分支预测材料仅是初始种子，下一步先建立 CPU 历史变化时间线与因果链。全 SoC v1.3 仍待 Issue #1 真实专家评审与用户视觉验收；PPT批量制作暂停。
 
 仓名 `cpu-microarchitecture-trends` 沿用早期命名；项目研究对象是**智能手机完整 SoC/平台的 2007—2026 年演进及 2027—2028 年有条件前瞻**，并非只研究CPU。覆盖 CPU/GPU/DSP/NPU、ISP/编解码/显示、Modem-RF/天线、缓存/DRAM/互连、软件运行时、常驻感知/安全、电源域/封装/散热。严格区分**裸片、同封装/配套芯片、平台、手机整机和网络环境**。
 
 ## 一、最重要的入口
 
-- **[第十七轮 CPU 微架构/LLVM 初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)** — 官方 SME/ABI/LLVM 种子、分支预测研究与设备迁移边界。
+- **[研究目的澄清与下一步框架（2026-10-23）](00-project/research-transactions/round-18-2026-10-23.md)** — 将 CPU 深化支线重新锚定在历史变化、动因、后果和未来趋势参考。\n- **[第十七轮 CPU 微架构/LLVM 初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)** — 官方 SME/ABI/LLVM 种子、分支预测研究与设备迁移边界。
 - **[CPU 微架构与 LLVM 深化支线：范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)** — 明确通用移动 CPU 核、寄存器/状态、存储层次与 LLVM 代码生成的剩余问题。
 - **[第十五轮跨仓范围核对与 CPU/LLVM 成果复用](02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)** — 明确本仓全 SoC 报告与已结题 Agentic CPU-uArch 专项的分工，避免重复研究。
 - **[第十四轮结论审计与技术决策闭环](02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)** — 核心结论强度、竞争解释、可验证性与范围缺口。
@@ -43,12 +43,10 @@
 
 ## 四、下一步
 
-1. 深读[第十七轮初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)中的 LLVM SME/AAPCS64 和分支预测种子，核实机制、基线与迁移边界。
-2. 按[范围锁定与领域地图](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)定向补充 ROB/LSQ、物理寄存器/重命名、移动缓存/预取的原始来源；不重做已结题 Agentic CPU-uArch 的宽泛研究。
-3. CPU/LLVM 专项判断复用 [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md)与 [Round15F 技术机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。
-4. 本仓继续收集 [Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1) 对 EX-01 至 EX-12 的真实专家裁决。
-5. 只对可能改变全 SoC 核心判断的 Claim 定向补证；不为清空28条未映射来源而无限扩展。
-6. PPT 批量制作继续暂停，直到专家裁决与用户视觉方向确认。
-7. 若未来出现会改变 CPU/LLVM 决策的新公开原始证据，再按对应 SSOT 的门槛局部更新。
+1. 以[CPU 历史变化与因果分析框架](00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)为准，先建立 2007–2026 移动 CPU 微架构变化时间线。
+2. 对每个代表性变化，核对“当时的负载/约束 → 架构变化 → 预期/可观察收益 → 代价或瓶颈转移 → 后续影响”，区分厂商明确动因和研究推论。
+3. 再把 LLVM/ABI/SME、寄存器与存储层次等来源放到对应历史节点，解释软硬件如何相互影响；不把编译器机制孤立成新技术立项方向。
+4. 从历史规律对 2027–2028 年作有条件的趋势参考，并明确不确定性；不强行输出新硬件立项清单。
+5. 全 SoC v1.3 的专家评审 Issue #1 与页面级视觉验收仍是独立交付事项；正式 PPT 继续等待验收后再批量制作。
 
 公开仓不存公司非公开材料或未经授权的第三方全文。
