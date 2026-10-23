@@ -1,6 +1,6 @@
 # CPU 微架构历史演进与 LLVM 机制深化：范围锁定与领域地图（2026-10-23）
 
-**状态：SCOPE_LOCKED_FOR_PUBLIC_EVIDENCE_DISCOVERY / NOT_YET_A_RESEARCH_CONCLUSION**
+**状态：HISTORICAL_CAUSAL_FRAMEWORK_LOCKED / TIMELINE_AND_CAUSAL_AUDIT_PENDING**
 
 ## 1. 为什么需要这条支线
 
@@ -84,15 +84,16 @@ CPU 的变化如何受到 GPU、DSP/NPU、内存系统、制程、封装、OS �
 - **Memory:** cache hierarchy, SLC, TLB, prefetching, DRAM bandwidth, cache contention, tensor packing/layout, KV-cache, shared buffers, CPU-NPU data movement.
 - **Agentic/xPU:** multi-agent scheduling, partial DAG, stage/operator/shape/precision, CPU fallback, graph partition, dispatch/synchronization, QoS/QoE, foreground interference.
 
-## 7. 首轮证据筛选与决策语法
+## 7. 历史因果链的证据语法
 
-重要陈述采用 [FACT] / [CLAIM] / [OBSERVATION] / [INFERENCE] / [HYPOTHESIS] / [UNKNOWN] 标签。对每项候选机制分别记录：
-- **机制证据：** 来源是否直接说明该机制存在？
-- **移动相关性：** 是手机实测、移动 SoC、可迁移的通用机制，还是服务器结果？
-- **软件可达性：** LLVM/OS/Runtime 是否已有强基线？
-- **性能/能耗证据：** 是端到端测量、微基准、模拟、分析模型还是厂商声明？
-- **替代解释：** 制程、频率、软件版本、数据移动、NPU后端成熟度、散热和工作负载差异。
-- **决策状态：** KEEP / FOLLOW / RESERVE / NOT EVALUABLE；不得仅凭论文数量或新颖性升级为硬件立项。
+重要陈述采用 [FACT] / [CLAIM] / [OBSERVATION] / [INFERENCE] / [HYPOTHESIS] / [UNKNOWN] 标签。对每个历史变化点记录：
+- **变化事实：** 哪一代产品、核心、ISA、微架构或系统软件确实发生了变化？原始来源在哪里？
+- **动因证据：** 厂商/设计者是否明确说过为什么这么设计？若没有，必须标成分析推论，不能冒充设计者原话。
+- **同期背景：** 当时的工作负载、性能/能效目标、制程/面积、频率、内存和热约束是什么？
+- **结果证据：** 来源证明的是规格变化、设计目标、微基准结果、整机体验，还是独立测量？
+- **收益与代价：** 是否有证据支持改善了什么、又付出了什么代价或把瓶颈转移到哪里？
+- **替代解释：** 制程、频率、内存、OS/编译器、散热、手机厂商调校与测试负载是否可能解释部分现象？
+- **因果强度：** DIRECTLY_STATED / STRONGLY_CORROBORATED / PLAUSIBLE_INFERENCE / CORRELATION_ONLY / UNKNOWN。不得仅凭发布时间先后或跨代指标变化断言因果。
 
 ## 8. 下一最小步骤
 
