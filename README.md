@@ -15,6 +15,7 @@
 - **[第二十一轮核内机制证据矩阵 v0.1](03-analysis/移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)** — 逐核比较前端/分支、乱序执行、执行资源、Load/Store、缓存与预取；[机制审计](02-evidence/audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)记录指标口径冲突与测量边界；[来源卡](02-evidence/sources/round-21-核内微架构机制原始来源卡.md) · [事务记录](00-project/research-transactions/round-21-2026-10-23.md)。
 - **[第二十二轮微架构—LLVM 代码生成桥接矩阵 v0.1](03-analysis/移动CPU微架构与LLVM代码生成桥接矩阵-v0.1-2026-10-23.md)** — 说明目标模型、调度、寄存器分配、向量化、PGO、预取和 SME/ZA 的软件利用路径；[桥接审计](02-evidence/audits/round-22-llvm-hardware-codegen-bridge-audit-2026-10-23.md)与[来源卡](02-evidence/sources/round-22-LLVM代码生成与调度模型原始来源卡.md) · [事务记录](00-project/research-transactions/round-22-2026-10-23.md)。
 
+- **[LLVM 23.1.4 AArch64 目标调度模型核验 v0.1](03-analysis/LLVM-23.1.4-AArch64-目标调度模型核验-v0.1-2026-10-23.md)** — 固定 tag 下核验 A72/A76/A77/A78/A710/A715/A720/X1/X2/X3/X4/X925 的 ProcessorModel 与共享 scheduler model，记录模型参数、源码 SHA 和不应外推的边界。
 - **[第二十三轮 LLVM 版本冻结与目标模型核验记录（进行中）](00-project/research-transactions/round-23-2026-10-23.md)** — 已选择 LLVM 23.1.4 固定 tag，明确逐核字段与尚待源码验证的边界；不把 main 的模型映射冒充固定版本事实。
 - **[研究目的澄清与下一步框架（2026-10-23）](00-project/research-transactions/round-18-2026-10-23.md)** — 将 CPU 深化支线重新锚定在历史变化、动因、后果和未来趋势参考。
 - **[第十七轮 CPU 微架构/LLVM 初始来源筛选](02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)** — 官方 SME/ABI/LLVM 种子、分支预测研究与设备迁移边界。
