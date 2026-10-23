@@ -3,6 +3,7 @@
 ## 当前审计入口
 
 - [第十九轮：移动 CPU 历史时间线初始来源审计](audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)：将官方/技术来源映射到 2007–2026 CPU 变化点，区分设计动因、厂商收益声明、第三方逆向与未知边界。
+- [第十九轮移动 CPU 核内微架构原始来源卡](sources/round-19-移动CPU核内微架构原始来源.md)：收录 A9、Krait、A72、A76、A77/A78、Apple Cyclone 的核内机制资料和外推限制。
 
 - [第十七轮 CPU 微架构/LLVM 初始来源筛选](audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)：官方 SME/ABI/LLVM 机制种子、分支预测候选论文及移动适用性边界。
 
