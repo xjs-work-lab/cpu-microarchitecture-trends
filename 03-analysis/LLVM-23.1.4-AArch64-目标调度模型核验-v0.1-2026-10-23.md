@@ -71,3 +71,11 @@ LLVM 23.1.4 的 AArch64 后端并非为每一个 Cortex 核都配置完全独立
 - 检查 Apple A 系列与 Qualcomm/Oryon 的 target/scheduler model 是否存在，及其模型参数公开程度。
 - 在固定 tag 下追踪寄存器压力/spill、vectorizer cost model、PGO/block placement、prefetch 与 SME lowering 的关键实现。
 - 回写第19轮历史时间线与第21轮核内机制矩阵，形成“历史变化—软件入口—模型限制—因果解释”的交叉索引。
+
+## 5. Apple 与 Qualcomm target 覆盖补充
+
+固定 tag 中，Apple A14/A15/A16/A17/M4/M5 的 ProcessorModel 均关联到 `CycloneModel`，但各自使用不同的 processor feature 和 tuning feature 列表。别名包括：M1→A14 target、M2→A15、M3→A16、A18→M4、A19→M5。该事实表示 LLVM 目标模型与 tuning target 的组织方式，不代表这些芯片的真实微架构相同，也不代表所有 LLVM 版本采用同样设计。
+
+Qualcomm target 方面，此文件中存在 `kryo`→`KryoModel` 与 `saphira`→`FalkorModel`；本次没有发现名为 `oryon` 的 processor target。结论仅限于该文件与固定 tag 的命名搜索，不能泛化为 LLVM/Clang 不支持 Oryon 或厂商工具链不存在其他路径。
+
+这些映射都来自同一个官方开源项目文件，不能被误算成多份独立性能证据。
