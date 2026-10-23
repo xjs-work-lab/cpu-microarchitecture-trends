@@ -17,6 +17,8 @@
 
 **当前第十一轮：[主报告v1.3](../05-deliverables/08-智能手机SoC整体架构演进-技术洞察证据收敛版-v1.3.md) · [决策性证据收敛](../02-evidence/audits/round-11-关键证据收敛与发布闸门-2026-10-21.md) · [事务记录](research-transactions/round-11-2026-10-21.md)**。
 
-**第十八轮（2026-10-23）：** [目标校正与因果分析框架](research-transactions/round-18-2026-10-23.md)。\n\n**第十四至十七轮（2026-10-22）：** [结论审计](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md) · [跨仓核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md) · [事务16](research-transactions/round-16-2026-10-22.md) · [事务17](research-transactions/round-17-2026-10-22.md) · [专家评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
+**第十八轮（2026-10-23）：** [目标校正与因果分析框架](research-transactions/round-18-2026-10-23.md)。
+
+**第十四至十七轮（2026-10-22）：** [结论审计](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md) · [跨仓核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md) · [事务16](research-transactions/round-16-2026-10-22.md) · [事务17](research-transactions/round-17-2026-10-22.md) · [专家评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
 
 **第十二轮（2026-10-22）：** [v1.3反向审查与技术评审准备清单](../02-evidence/audits/round-12-v1.3-反向审查与技术评审准备-2026-10-22.md)；[正式技术评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
