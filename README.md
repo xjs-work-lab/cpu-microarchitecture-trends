@@ -15,6 +15,7 @@
 - **[第二十一轮核内机制证据矩阵 v0.1](03-analysis/移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)** — 逐核比较前端/分支、乱序执行、执行资源、Load/Store、缓存与预取；[机制审计](02-evidence/audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)记录指标口径冲突与测量边界；[来源卡](02-evidence/sources/round-21-核内微架构机制原始来源卡.md) · [事务记录](00-project/research-transactions/round-21-2026-10-23.md)。
 - **[第二十二轮微架构—LLVM 代码生成桥接矩阵 v0.1](03-analysis/移动CPU微架构与LLVM代码生成桥接矩阵-v0.1-2026-10-23.md)** — 说明目标模型、调度、寄存器分配、向量化、PGO、预取和 SME/ZA 的软件利用路径；[桥接审计](02-evidence/audits/round-22-llvm-hardware-codegen-bridge-audit-2026-10-23.md)与[来源卡](02-evidence/sources/round-22-LLVM代码生成与调度模型原始来源卡.md) · [事务记录](00-project/research-transactions/round-22-2026-10-23.md)。
 
+- **[Cortex-A72 → A76 → A77 → A78 跨代因果对照 v0.1](03-analysis/Cortex-A72-A76-A77-A78-跨代因果对照-v0.1-2026-10-23.md)** — 以 Arm 原始资料对照四代设计动作、明确动机、机制、收益口径、代价与尚未证实的瓶颈转移。
 - **[移动 CPU 微架构历史因果链完整性审计 v0.1](03-analysis/移动CPU微架构历史因果链完整性审计-v0.1-2026-10-23.md)** — 检查“前代约束→设计动作→作用机制→收益/代价→后续瓶颈”是否有证据支撑，给出 A72/A76/A77/A78 主线及 Apple/Samsung/Qualcomm/Taishan 的证据等级与缺口；确认尚不能宣称全部代际因果链已闭环。
 - **[LLVM—核内机制交叉索引与历史因果补充](03-analysis/移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)**、[历史时间线补充](03-analysis/移动CPU微架构历史变化时间线-v0.1-2026-10-23.md) — 将硬件机制与 LLVM 23.1.4 的软件利用路径关联，并明确模型、profile 与真实手机效果的证据边界。
 - **[LLVM 23.1.4 代码生成优化入口审计 v0.1](03-analysis/LLVM-23.1.4-代码生成优化入口审计-v0.1-2026-10-23.md)** — 固定版本核查寄存器压力调度、寄存器分配、向量化成本模型、profile 引导的基本块布局与 SME 状态属性；明确软件机制存在不等于手机端效果已验证。
