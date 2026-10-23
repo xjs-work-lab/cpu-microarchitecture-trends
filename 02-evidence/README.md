@@ -2,6 +2,8 @@
 
 ## 当前审计入口
 
+- [第十九轮：移动 CPU 历史时间线初始来源审计](audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)：将官方/技术来源映射到 2007–2026 CPU 变化点，区分设计动因、厂商收益声明、第三方逆向与未知边界。
+
 - [第十七轮 CPU 微架构/LLVM 初始来源筛选](audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md)：官方 SME/ABI/LLVM 机制种子、分支预测候选论文及移动适用性边界。
 
 - [第十五轮跨仓范围核对与 CPU/LLVM 成果复用](audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)：将本仓全 SoC 研究与已结题的 Agentic CPU-uArch/LLVM 专项分工；后者只在出现决策性新公开证据或关键错误时重开。
