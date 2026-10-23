@@ -1,5 +1,7 @@
 # 项目与研究状态
 
+- **当前目标口径（2026-10-23）：** 复盘移动终端 SoC、特别是 CPU 的历史变化点、动因、收益、代价与瓶颈转移，并以此理解未来趋势；不以提出新技术立项为目标。见[第十八轮目标校正记录](research-transactions/round-18-2026-10-23.md)。
+
 - **[CPU 微架构与 LLVM 深化支线范围锁定](cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)**：第十六轮定义了尚未系统覆盖的通用移动 CPU 核、寄存器/状态、内存层次与 LLVM 代码生成问题；下一步是小规模 seed discovery，不代表新来源已经核验。
 - [第十七轮初始来源筛选](../02-evidence/audits/round-17-CPU-uArch-LLVM-initial-seed-discovery-2026-10-22.md) · [事务记录](research-transactions/round-17-2026-10-22.md)
 - [第十六轮事务记录](research-transactions/round-16-2026-10-22.md) · [第十五轮跨仓范围核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md)
@@ -15,6 +17,6 @@
 
 **当前第十一轮：[主报告v1.3](../05-deliverables/08-智能手机SoC整体架构演进-技术洞察证据收敛版-v1.3.md) · [决策性证据收敛](../02-evidence/audits/round-11-关键证据收敛与发布闸门-2026-10-21.md) · [事务记录](research-transactions/round-11-2026-10-21.md)**。
 
-**第十四至十七轮（2026-10-22）：** [结论审计](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md) · [跨仓核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md) · [事务16](research-transactions/round-16-2026-10-22.md) · [事务17](research-transactions/round-17-2026-10-22.md) · [专家评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
+**第十八轮（2026-10-23）：** [目标校正与因果分析框架](research-transactions/round-18-2026-10-23.md)。\n\n**第十四至十七轮（2026-10-22）：** [结论审计](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md) · [跨仓核对](../02-evidence/audits/round-15-跨仓范围核对与CPU-LLVM成果复用-2026-10-22.md) · [事务16](research-transactions/round-16-2026-10-22.md) · [事务17](research-transactions/round-17-2026-10-22.md) · [专家评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
 
 **第十二轮（2026-10-22）：** [v1.3反向审查与技术评审准备清单](../02-evidence/audits/round-12-v1.3-反向审查与技术评审准备-2026-10-22.md)；[正式技术评审Issue #1](https://github.com/xjs-work-lab/cpu-microarchitecture-trends/issues/1)。
