@@ -247,3 +247,17 @@ CPU 仍承担 OS、应用控制流、调度与大量通用代码；GPU/NPU 继�
 - **2020 Apple A14/Firestorm：** M1等平台的逆向证据观察到8µops/cycle与约330 coalesced-retire groups、约623 rename-retire entries，并有大在途访存/融合/消除路径；这些**不等于623传统ROB，也不等于A14 iPhone的直接量化测试**。标记**[REVERSE/B；内部因果C]**。
 
 **修正后的长周期观察：** 高性能移动核不只加宽，还持续调整指令供给、前端功耗、预测/安全、窗口与访存跨层路径；Apple与Samsung公开机制在部分目标上相互重叠。Apple A8–A13中间代际还不够完整，禁止把2013和2020的估计ROB/retire数字拼成同口径增长曲线。
+
+
+## 11. 第26轮补充：Apple A8—A13 连续历史节点与CPU—SoC—OS联动（2026-10-26）
+
+已单独归档[Apple A8—A13代际机制与因果链](Apple-A8-A13-代际机制与因果链-v0.1-2026-10-26.md)，其[原始资料AP26-01—18](../02-evidence/sources/round-26-apple-a8-a13-primary-and-reverse-sources-2026-10-26.md)及[逐项审计](../02-evidence/audits/round-26-apple-a8-a13-lineage-claim-audit-2026-10-26.md)是本节证据所有者。
+
+- **2014 A8**：官方强调第二代64位移动能效与持续性能；第三方低层测试显示仍约6-wide、对Cyclone有延迟优化，但ROB“192?”有疑问。**[OFFICIAL_PRODUCT + REVERSE; 内部动机C]**
+- **2015 A9**：第三方报告仍约6-wide/192ROB，branch mispredict penalty约16→9 cycles、FP延迟与L2优化，不能把Apple官方CPU70%宣传单独归到branch penalty。**[REVERSE/B; 收益归因C/D]**
+- **2016 A10**：Apple公开2P+2E异构CPU，能效核1/5功耗为厂商比较声明；CPU控制策略更重要。**[OFFICIAL/A配置; 能耗归因D]**
+- **2017 A11**：Apple官方2P+4E，第二代performance controller使六核同时工作，标志从“两种核型”发展为“不同核型可同时并行”。**[OFFICIAL/A配置与能力; 端到端收益C]**
+- **2018 A12**：第三方观察Vortex大核约7-wide/128KB L1、Tempest E核为3-wide OoO，及偏访存负载受cache/存储子系统影响；Apple官方核心组仍2P+4E。**[REVERSE/B，受SPEC工具链/制程/系统限制]**
+- **2019 A13**：第三方观察Lightning大核7-wide不再全面扩宽，Thunder E核大幅提升FP/SIMD、L1D；SLC增至推断16MB，OS/DVFS小核→大核迁移在具体工作负载下从约54ms缩短到30ms。低DRAM频点可能令特定E核访存负载退步。**[REVERSE+MEASUREMENT/B; 阈值/收益不是所有负载事实]**
+
+**本轮历史含义：** Apple并非沿“逐代扩ROB/issue宽度”单一路线发展；高性能核逐渐与更强的E核、共享内存层次、操作系统工作负载调度和电源状态决策形成一体化设计。在第25轮Apple/Samsung对照中，该案例支持“负载/电热/数据路径驱动优化”的解释，但不证明Apple内部每个芯内设计决策的因果来源。
