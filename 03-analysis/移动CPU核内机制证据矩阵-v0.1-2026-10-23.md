@@ -114,3 +114,16 @@
 - **可谨慎推论：** 某项机制为优化提供了可能的软件路径，或者某个模型共享可能限制目标特异性。
 - **仍未知：** 实际手机的代码生成选择、动态微架构行为、持续性能与净能耗收益。
 - 不应写成“LLVM 已充分利用了该硬件能力”，除非有目标构建配置、生成汇编/优化记录以及匹配 workload 的验证证据。
+
+
+## 8. 第25轮补充索引：Apple与Samsung核内机制、模型与能效边界
+
+参见[第25轮正式比较](Apple-Cyclone-Firestorm-vs-Samsung-M1-M5-微架构因果比较-v0.1-2026-10-26.md)与[可比性审计](../02-evidence/audits/round-25-apple-samsung-mechanism-causal-audit-2026-10-26.md)：
+
+| 机制/疑点 | 第25轮修订后的可信表达 | 拒绝的强结论 |
+|---|---|---|
+| Samsung M3从4→6与ROB扩展 | ISCA Table I的Dec/Ren/Ret 4→6及M2→M3 ROB 100→228为设计者表项；分支预测因宽度增加而同步优化的动因有原文 | “Samsung只做节能、没有宽核”；表项不等于手机实测吞吐 |
+| Samsung M5 UOC | 384µop UOC，Filter/Build/Fetch；有利时关I-cache/decode，设计动机明确是重复热点节能 | 全手机能耗确定下降X%、任何工作负载必定命中 |
+| 预取与跨层延迟 | 自适应degree抑制误预取的功耗/带宽/缓存成本；M4/M5延迟关键路径包括互连和DRAM控制器，不能都称核内 | 所有收益来自增大L1/ROB或单一prefetcher |
+| Apple Cyclone和Firestorm | Cyclone约192 ROB为旧第三方逆向/源码线索；Firestorm的~330 retire groups与~623 rename-retire是不同结构，主要M1黑盒 | “Firestorm传统ROB=623、比Cyclone增加3.25倍” |
+| 同类问题跨厂商 | 两家都处理预测/并行/访存/能耗，但直接公开技术资料透明度和观测方法不同 | 根据两组不一致证据推断Apple与Samsung有互斥设计哲学或定量孰优 |
