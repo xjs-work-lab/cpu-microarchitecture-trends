@@ -2,6 +2,8 @@
 
 ## 当前审计入口
 
+- **[第27轮五问题覆盖、114条台账字段卫生与12条因果反例审计](audits/round-27-五问题覆盖-证据卫生-因果反例审计-2026-10-26.md)**：直接解析CSV：114唯一ID、86条对应判断、30条精确位置、基线/单位/反例各4，区分字段齐备与全量原文核验；与[全SoC/CPU覆盖矩阵](../03-analysis/全SoC-移动CPU历史演进五问题覆盖矩阵-v0.1-2026-10-26.md)和[历史结论草案](../03-analysis/移动SoC-CPU历史结论收敛草案-v0.1-2026-10-26.md)互链。
+
 - **[第26轮Apple A8—A13 16项Claim审计](audits/round-26-apple-a8-a13-lineage-claim-audit-2026-10-26.md)** · [18组官方及逆向来源卡](sources/round-26-apple-a8-a13-primary-and-reverse-sources-2026-10-26.md)：明确Apple官方SoC/核群声明、AnandTech芯内逆向、TechInsights拆片和SPEC/DVFS测试边界；CPU支线来源不计入下方主报告114条中央台账。
 
 - **[第25轮Apple/Samsung因果可比性审计](audits/round-25-apple-samsung-mechanism-causal-audit-2026-10-26.md)** · [Samsung设计者论文原始来源](sources/round-25-samsung-m1-m5-engineering-paper-2026-10-26.md) · [Apple黑盒实验原始来源](sources/round-25-apple-cyclone-firestorm-reverse-evidence-2026-10-26.md)：核对宽度、ROB/退休队列、UOC省电、预取/访存与模拟/真机边界；支线来源尚不计入下方主报告114条台账。
