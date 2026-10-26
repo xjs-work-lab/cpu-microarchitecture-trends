@@ -1,6 +1,12 @@
 # 技术洞察与汇报交付区
 
-## 当前最重要的成果\n\n**CPU/LLVM 专项参考（独立结题仓，不是本报告附属文件）：** [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md) · [CPU/LLVM、微内核与异构 NPU 技术机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。本仓 v1.3 仍以全 SoC 系统级趋势为主；引用专项结论不代表本仓已完成专家评审。
+## 当前最重要的成果
+
+**[最新：第29轮详细技术汇报Markdown母稿v0.1](10-智能手机SoC与CPU微架构演进-详细技术汇报母稿-v0.1-2026-10-26.md)** — 整合全SoC v1.3和第19—28轮CPU深度研究，包含2007—2026五阶段、Arm/Apple/Samsung核内因果、P/E vs all-big、2026实际手机产品化、跨SoC数据路径、GPU/NPU/ISP/Modem、OS/LLVM、四负载、五问与2027—2028条件参考。它是**详细、独立可读、面向后续正式汇报的内容候选终稿**，不覆盖旧v1.3。
+
+**[第29轮24页逐页PPT取材与证据合同](11-汇报PPT逐页内容取材与证据合同-v0.1-2026-10-26.md)** — 每页结论标题、核心可见信息、科研示意、完整讲述、原始出处与边界；[内容QA](../02-evidence/audits/round-29-详细汇报母稿与PPT取材合同内容QA-2026-10-26.md)核验24页合同字段。**没有生成24页PPTX，24只是建议规模**。正式专家评审与可编辑PPT视觉验收继续独立。
+
+**CPU/LLVM 专项参考（独立结题仓，不是本报告附属文件）：** [Agentic CPU-uArch 现行技术组合](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/09-roadmap/current.md) · [CPU/LLVM、微内核与异构 NPU 技术机制审计](https://github.com/xjs-work-lab/agentic-CPU-uArch/blob/main/analysis/engineering/round15f-cpu-llvm-compiler-pressure-2026-10-08.md)。本仓 v1.3 仍以全 SoC 系统级趋势为主；引用专项结论不代表本仓已完成专家评审。
 
 **当前优先阅读：[第十四轮结论审计与技术决策闭环](../02-evidence/audits/round-14-结论审计与技术决策闭环-2026-10-22.md)** — 先明确五个研究问题的结论强度、竞争解释、可验证性与全SoC报告和CPU微架构路线图的范围差距；PPT批量制作暂缓。
 
