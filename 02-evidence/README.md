@@ -2,6 +2,8 @@
 
 ## 当前审计入口
 
+- **[第26轮Apple A8—A13 16项Claim审计](audits/round-26-apple-a8-a13-lineage-claim-audit-2026-10-26.md)** · [18组官方及逆向来源卡](sources/round-26-apple-a8-a13-primary-and-reverse-sources-2026-10-26.md)：明确Apple官方SoC/核群声明、AnandTech芯内逆向、TechInsights拆片和SPEC/DVFS测试边界；CPU支线来源不计入下方主报告114条中央台账。
+
 - **[第25轮Apple/Samsung因果可比性审计](audits/round-25-apple-samsung-mechanism-causal-audit-2026-10-26.md)** · [Samsung设计者论文原始来源](sources/round-25-samsung-m1-m5-engineering-paper-2026-10-26.md) · [Apple黑盒实验原始来源](sources/round-25-apple-cyclone-firestorm-reverse-evidence-2026-10-26.md)：核对宽度、ROB/退休队列、UOC省电、预取/访存与模拟/真机边界；支线来源尚不计入下方主报告114条台账。
 
 - **[第24轮核组合与因果审计](audits/round-24-core-topology-causal-audit-2026-10-26.md)** · [第24轮原始来源卡T24-01—11](sources/round-24-多层核心组合路线原始来源卡-2026-10-26.md)：审计全大核/P-E/自研核、频率档位、持续能效的定量归因限制。这些支线来源暂不计入下方主报告114条中央台账。
