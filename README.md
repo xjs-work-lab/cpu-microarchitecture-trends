@@ -1,10 +1,12 @@
 # 智能手机 SoC 整体架构演进｜技术洞察知识库
 
-> **当前状态（2026-10-26）：第25轮Apple/Samsung核内机制因果对照已归档。** 项目复盘2007—2026智能手机SoC、尤其CPU的历史变化与原因/收益/代价/瓶颈转移，未来只给条件性参考；不开展新技术立项。第19—23轮已建立历史与LLVM机制主线，第24轮比较Apple P/E、MediaTek全大核与Qualcomm Oryon的核组合分化，第25轮用Apple黑盒逆向与Samsung工业论文检查宽执行、分支预测、UOC/预取及跨电源域访存机制。不同队列定义、模拟与硅片、跨厂商功耗比较仍有限制；全SoC v1.3待Issue #1实际专家评审，PPT批量制作暂停。
+> **当前状态（2026-10-26）：已完成第26轮Apple A8—A13代际连续性审计。** 研究复盘2007—2026移动SoC尤其CPU的历史变化、驱动、收益、代价与瓶颈迁移，2027—2028只作条件性参考，不是新技术立项。第19—23轮形成历史因果/LLVM辅助机制，第24轮比较P/E、全大核与自研核组合，第25轮对照Apple/Samsung自研核，第26轮补全Apple Cyclone(A7)与Firestorm(A14)之间A8—A13逐代来源，并发现异构六核、E核OoO、共享缓存与iOS/DVFS共同演进。微架构细节部分依赖第三方逆向，单因素能效归因仍阻断。全SoC v1.3待Issue #1真实专家评审，PPT批量制作暂停。
 
 仓名 `cpu-microarchitecture-trends` 沿用早期命名；项目研究对象是**智能手机完整 SoC/平台的 2007—2026 年演进及 2027—2028 年有条件前瞻**，并非只研究CPU。覆盖 CPU/GPU/DSP/NPU、ISP/编解码/显示、Modem-RF/天线、缓存/DRAM/互连、软件运行时、常驻感知/安全、电源域/封装/散热。严格区分**裸片、同封装/配套芯片、平台、手机整机和网络环境**。
 
 ## 一、最重要的入口
+
+- **[第26轮：Apple A8—A13代际机制与因果链](03-analysis/Apple-A8-A13-代际机制与因果链-v0.1-2026-10-26.md)** — 从Typhoon/Twister到Hurricane/Zephyr、Monsoon/Mistral、Vortex/Tempest、Lightning/Thunder，区分核内改善、P/E控制、系统缓存与DVFS；[18组官方/逆向来源卡](02-evidence/sources/round-26-apple-a8-a13-primary-and-reverse-sources-2026-10-26.md) · [16项Claim审计](02-evidence/audits/round-26-apple-a8-a13-lineage-claim-audit-2026-10-26.md) · [事务26](00-project/research-transactions/round-26-2026-10-26.md)。
 
 - **[第25轮：Apple Cyclone/Firestorm vs Samsung Exynos M1–M5核内因果对照](03-analysis/Apple-Cyclone-Firestorm-vs-Samsung-M1-M5-微架构因果比较-v0.1-2026-10-26.md)** — 正面比较前端宽度、ROB/退休队列的术语、预测、UOC、寄存器与跨层内存延迟；[Samsung第一手工程论文卡](02-evidence/sources/round-25-samsung-m1-m5-engineering-paper-2026-10-26.md) · [Apple黑盒测量卡](02-evidence/sources/round-25-apple-cyclone-firestorm-reverse-evidence-2026-10-26.md) · [逐项审计](02-evidence/audits/round-25-apple-samsung-mechanism-causal-audit-2026-10-26.md) · [事务记录](00-project/research-transactions/round-25-2026-10-26.md)。
 
@@ -64,9 +66,9 @@
 
 ## 四、下一步
 
-1. **补连续性：** 定向核查Apple A8—A13中间代际前端、窗口、执行与数据供给的原始逆向/技术说明；第25轮Cyclone→Firestorm目前只有两个深度分析节点，不能虚构完整因果链。
-2. **同机制跨路线复核：** 以第25轮Samsung M3/M5动机为参照，检查Arm Cortex-X/A及Qualcomm Oryon公开机制；用相同字段记录证据类型，不用不同来源的ROB/issue数字简单排序。
-3. **系统边界：** 对第24轮核心配置与第25轮缓存/互连机制适度补查操作系统调度、DVFS、数据与时钟域路径；保留同条件热功耗量化未知。
-4. **审计与交付：** 逐条补全历史因果链与反例，更新证据成熟度；全SoC v1.3专家评审Issue #1与正式PPT继续保持独立、待验收。
+1. **整体因果覆盖审计：** 将Apple A8—A13、Samsung M1—M5、Arm A72—A78、第24轮P/E/全大核纳入统一的“代际×变化原因×证据强度×反例”矩阵，评估是否足以收敛历史趋势结论。
+2. **定向补证而不扩张型号：** 重点核验A10/A11内部微架构缺失字段、A12/A13小核低层测试/DVFS口径，以及安全/负载等机制驱动与竞争解释；无法公开确认保持UNKNOWN。
+3. **严格归因边界：** 不拼接厂商宣传收益、第三方黑盒、Samsung周期精确模拟为同一数值序列；CPU核内、SoC内存/缓存、OS调度和整机热功耗分层。
+4. **交付独立：** 全SoC v1.3专家评审Issue #1仍未完成，PPT继续暂停。
 
 公开仓不存公司非公开材料或未经授权的第三方全文。
