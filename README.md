@@ -1,10 +1,12 @@
 # 智能手机 SoC 整体架构演进｜技术洞察知识库
 
-> **当前状态（2026-10-26）：第24轮移动CPU核组合分化与能效因果审计已归档。** 本项目复盘2007—2026智能手机完整SoC、尤其CPU的历史变化与动因、代价和瓶颈转移，给未来提供有边界的趋势参考，**不以新技术立项为目标**。第19—23轮已建立历史时间线、跨厂商/核内机制矩阵，并固定LLVM 23.1.4对照编译器利用路径；第24轮补齐Apple P/E、MediaTek全大核、Qualcomm Oryon、Arm C1/C2和2026频率分档的历史对照。核心因果链仍需独立验证，尚无手机端单因素功耗归因。全SoC v1.3待Issue #1真实专家评审，PPT批量制作暂停。
+> **当前状态（2026-10-26）：第25轮Apple/Samsung核内机制因果对照已归档。** 项目复盘2007—2026智能手机SoC、尤其CPU的历史变化与原因/收益/代价/瓶颈转移，未来只给条件性参考；不开展新技术立项。第19—23轮已建立历史与LLVM机制主线，第24轮比较Apple P/E、MediaTek全大核与Qualcomm Oryon的核组合分化，第25轮用Apple黑盒逆向与Samsung工业论文检查宽执行、分支预测、UOC/预取及跨电源域访存机制。不同队列定义、模拟与硅片、跨厂商功耗比较仍有限制；全SoC v1.3待Issue #1实际专家评审，PPT批量制作暂停。
 
 仓名 `cpu-microarchitecture-trends` 沿用早期命名；项目研究对象是**智能手机完整 SoC/平台的 2007—2026 年演进及 2027—2028 年有条件前瞻**，并非只研究CPU。覆盖 CPU/GPU/DSP/NPU、ISP/编解码/显示、Modem-RF/天线、缓存/DRAM/互连、软件运行时、常驻感知/安全、电源域/封装/散热。严格区分**裸片、同封装/配套芯片、平台、手机整机和网络环境**。
 
 ## 一、最重要的入口
+
+- **[第25轮：Apple Cyclone/Firestorm vs Samsung Exynos M1–M5核内因果对照](03-analysis/Apple-Cyclone-Firestorm-vs-Samsung-M1-M5-微架构因果比较-v0.1-2026-10-26.md)** — 正面比较前端宽度、ROB/退休队列的术语、预测、UOC、寄存器与跨层内存延迟；[Samsung第一手工程论文卡](02-evidence/sources/round-25-samsung-m1-m5-engineering-paper-2026-10-26.md) · [Apple黑盒测量卡](02-evidence/sources/round-25-apple-cyclone-firestorm-reverse-evidence-2026-10-26.md) · [逐项审计](02-evidence/audits/round-25-apple-samsung-mechanism-causal-audit-2026-10-26.md) · [事务记录](00-project/research-transactions/round-25-2026-10-26.md)。
 
 - **[第24轮：CPU核组合分化与能效因果对照 v0.1](03-analysis/移动CPU核心组合分化与能效驱动因果对照-v0.1-2026-10-26.md)** — 对照Apple P/E、MediaTek 9300→9600 Pro全大核、Qualcomm Oryon，并拆分核内微架构/核型/频率档位/调度；[原始来源卡](02-evidence/sources/round-24-多层核心组合路线原始来源卡-2026-10-26.md) · [因果审计](02-evidence/audits/round-24-core-topology-causal-audit-2026-10-26.md) · [事务记录](00-project/research-transactions/round-24-2026-10-26.md)。
 
@@ -62,10 +64,9 @@
 
 ## 四、下一步
 
-1. **核内机制复核：** 以Apple Cyclone/Firestorm和Samsung Exynos M1–M5工业论文/逆向为下一批对象，逐条区分设计者明确动机、第三方估计、模拟结果与真机证据。
-2. **SoC调度因果补充：** 以第24轮核组合研究为入口，查核EAS/DVFS/任务迁移、核级工作点与缓存/功耗混杂；不能仅凭核组合断言哪种方案更省电。
-3. **近期产品化核验：** 对2026 C2/9600 Pro等逐项分开记录Arm IP发布、SoC公告、具体手机型号/零售时间与独立测试，不以发布稿代替实测。
-4. **历史结论交叉审计：** 把通过的第24轮结论与第19—23轮时间线、核内矩阵对齐，维持证据等级；不重跑已完成的LLVM tag基础核验。
-5. **交付闸门：** 全SoC v1.3真实专家评审Issue #1未完成；正式PPT批量制作继续暂停。
+1. **补连续性：** 定向核查Apple A8—A13中间代际前端、窗口、执行与数据供给的原始逆向/技术说明；第25轮Cyclone→Firestorm目前只有两个深度分析节点，不能虚构完整因果链。
+2. **同机制跨路线复核：** 以第25轮Samsung M3/M5动机为参照，检查Arm Cortex-X/A及Qualcomm Oryon公开机制；用相同字段记录证据类型，不用不同来源的ROB/issue数字简单排序。
+3. **系统边界：** 对第24轮核心配置与第25轮缓存/互连机制适度补查操作系统调度、DVFS、数据与时钟域路径；保留同条件热功耗量化未知。
+4. **审计与交付：** 逐条补全历史因果链与反例，更新证据成熟度；全SoC v1.3专家评审Issue #1与正式PPT继续保持独立、待验收。
 
 公开仓不存公司非公开材料或未经授权的第三方全文。
