@@ -4,6 +4,8 @@
 
 当前优先任务不是提出新技术立项建议，而是复盘移动 CPU 历史变化、解释动因和后果。
 
+- **[第25轮 Apple Cyclone/Firestorm vs Samsung Exynos M1–M5机制因果对照](Apple-Cyclone-Firestorm-vs-Samsung-M1-M5-微架构因果比较-v0.1-2026-10-26.md)**：工业设计者第一手动因与Apple独立黑盒逆向并列，区分核内宽度、退休队列、负载、预取及SoC访存。配套[逐项审计](../02-evidence/audits/round-25-apple-samsung-mechanism-causal-audit-2026-10-26.md)；仍不支持跨厂商同条件IPC/能耗比较。
+
 - **[第24轮核心组合分化与能效因果对照 v0.1](移动CPU核心组合分化与能效驱动因果对照-v0.1-2026-10-26.md)**：区分Apple P/E、MediaTek全大核、Qualcomm Oryon及2026 C2的微架构类别/频率档；每项注明动机、机制推论、混杂因素与未知。配套[来源卡](../02-evidence/sources/round-24-多层核心组合路线原始来源卡-2026-10-26.md)和[审计](../02-evidence/audits/round-24-core-topology-causal-audit-2026-10-26.md)。
 
 - **[第二十一轮核内机制证据矩阵 v0.1](移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)**：逐核归一前端、分支预测、乱序执行、执行资源、Load/Store、缓存和预取；边界见[机制审计](../02-evidence/audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)，原始来源见[第二十一轮来源卡](../02-evidence/sources/round-21-核内微架构机制原始来源卡.md)。
