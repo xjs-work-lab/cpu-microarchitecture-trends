@@ -2,6 +2,8 @@
 
 ## 当前审计入口
 
+- **[第24轮核组合与因果审计](audits/round-24-core-topology-causal-audit-2026-10-26.md)** · [第24轮原始来源卡T24-01—11](sources/round-24-多层核心组合路线原始来源卡-2026-10-26.md)：审计全大核/P-E/自研核、频率档位、持续能效的定量归因限制。这些支线来源暂不计入下方主报告114条中央台账。
+
 - [第十九轮：移动 CPU 历史时间线初始来源审计](audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)：将官方/技术来源映射到 2007–2026 CPU 变化点，区分设计动因、厂商收益声明、第三方逆向与未知边界。
 - [第十九轮移动 CPU 核内微架构原始来源卡](sources/round-19-移动CPU核内微架构原始来源.md)：收录 A9、Krait、A72、A76、A77/A78、Apple Cyclone 的核内机制资料和外推限制。
 - [第二十轮跨厂商 CPU 路线与产品化来源卡](sources/round-20-移动CPU跨厂商路线与产品化来源卡.md)：区分自研核、半定制核、Cortex IP 与 CSS 集成，并核对关键 SoC/手机日期。
