@@ -127,3 +127,16 @@
 | 预取与跨层延迟 | 自适应degree抑制误预取的功耗/带宽/缓存成本；M4/M5延迟关键路径包括互连和DRAM控制器，不能都称核内 | 所有收益来自增大L1/ROB或单一prefetcher |
 | Apple Cyclone和Firestorm | Cyclone约192 ROB为旧第三方逆向/源码线索；Firestorm的~330 retire groups与~623 rename-retire是不同结构，主要M1黑盒 | “Firestorm传统ROB=623、比Cyclone增加3.25倍” |
 | 同类问题跨厂商 | 两家都处理预测/并行/访存/能耗，但直接公开技术资料透明度和观测方法不同 | 根据两组不一致证据推断Apple与Samsung有互斥设计哲学或定量孰优 |
+
+
+## 9. 第26轮Apple A8—A13核内证据修正索引（含SoC/OS层）
+
+详见[Apple A8—A13跨代对照](Apple-A8-A13-代际机制与因果链-v0.1-2026-10-26.md)及其[Claim审计](../02-evidence/audits/round-26-apple-a8-a13-lineage-claim-audit-2026-10-26.md)。
+
+| 更新项 | 分层与强度 | 不得混写的结论 |
+|---|---|---|
+| A8→A9 | 第三方逆向：约6-wide未显著扩宽；A9 branch penalty/FP延迟与L2改善 | A8带?的ROB参数不能当确证；分支恢复惩罚不等于预测准确率 |
+| A10→A11 | Apple产品官方：2P+2E→2P+4E且可六核同时工作 | 这是SoC核心组合与performance controller能力，不是ROB/译码宽度增加的证据 |
+| A12 Tempest | 第三方测试：3-wide OoO E核 | E核不等于Arm Cortex-A53/A55式的顺序小核 |
+| A12 Vortex→A13 Lightning | 第三方报告：7-wide大核保持，部分乘除路径优化 | 不证明大核执行资源每代都扩大，也不等于所有应用同幅提速 |
+| A13 Thunder+SLC+调度 | 逆向/测量：E核FP/SIMD与cache增量、SLC估计16MB、特定测试迁核约54→30ms | SLC≠CPU私有L3；迁核时间非固定OS阈值；内存控制器DVFS影响小核效果 |
