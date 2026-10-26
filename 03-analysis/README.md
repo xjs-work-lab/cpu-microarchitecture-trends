@@ -4,6 +4,9 @@
 
 当前优先任务不是提出新技术立项建议，而是复盘移动 CPU 历史变化、解释动因和后果。
 
+- **[第26轮Apple A8—A13代际机制与因果链](Apple-A8-A13-代际机制与因果链-v0.1-2026-10-26.md)**：从Cyclone到Firestorm中间六代，揭示6-wide大核改良、A10→A11异构六核并发、A12 E核OoO、A13缓存与调度/DVFS的共同演进。[来源卡](../02-evidence/sources/round-26-apple-a8-a13-primary-and-reverse-sources-2026-10-26.md)、[审计](../02-evidence/audits/round-26-apple-a8-a13-lineage-claim-audit-2026-10-26.md)；A10/A11核内隐藏参数和单因素能耗未证。
+
+
 - **[第25轮 Apple Cyclone/Firestorm vs Samsung Exynos M1–M5机制因果对照](Apple-Cyclone-Firestorm-vs-Samsung-M1-M5-微架构因果比较-v0.1-2026-10-26.md)**：工业设计者第一手动因与Apple独立黑盒逆向并列，区分核内宽度、退休队列、负载、预取及SoC访存。配套[逐项审计](../02-evidence/audits/round-25-apple-samsung-mechanism-causal-audit-2026-10-26.md)；仍不支持跨厂商同条件IPC/能耗比较。
 
 - **[第24轮核心组合分化与能效因果对照 v0.1](移动CPU核心组合分化与能效驱动因果对照-v0.1-2026-10-26.md)**：区分Apple P/E、MediaTek全大核、Qualcomm Oryon及2026 C2的微架构类别/频率档；每项注明动机、机制推论、混杂因素与未知。配套[来源卡](../02-evidence/sources/round-24-多层核心组合路线原始来源卡-2026-10-26.md)和[审计](../02-evidence/audits/round-24-core-topology-causal-audit-2026-10-26.md)。
