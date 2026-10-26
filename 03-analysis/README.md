@@ -1,8 +1,10 @@
 # 分析推论
 
-## 当前研究主线（2026-10-23）
+## 当前研究主线（2026-10-26）
 
 当前优先任务不是提出新技术立项建议，而是复盘移动 CPU 历史变化、解释动因和后果。
+
+- **[第24轮核心组合分化与能效因果对照 v0.1](移动CPU核心组合分化与能效驱动因果对照-v0.1-2026-10-26.md)**：区分Apple P/E、MediaTek全大核、Qualcomm Oryon及2026 C2的微架构类别/频率档；每项注明动机、机制推论、混杂因素与未知。配套[来源卡](../02-evidence/sources/round-24-多层核心组合路线原始来源卡-2026-10-26.md)和[审计](../02-evidence/audits/round-24-core-topology-causal-audit-2026-10-26.md)。
 
 - **[第二十一轮核内机制证据矩阵 v0.1](移动CPU核内机制证据矩阵-v0.1-2026-10-23.md)**：逐核归一前端、分支预测、乱序执行、执行资源、Load/Store、缓存和预取；边界见[机制审计](../02-evidence/audits/round-21-mobile-cpu-core-mechanism-evidence-audit-2026-10-23.md)，原始来源见[第二十一轮来源卡](../02-evidence/sources/round-21-核内微架构机制原始来源卡.md)。
 - **[第二十二轮微架构—LLVM 代码生成桥接矩阵 v0.1](移动CPU微架构与LLVM代码生成桥接矩阵-v0.1-2026-10-23.md)**：把硬件机制连接到 LLVM 的目标模型、调度、寄存器分配、向量化、PGO、prefetch 与 SME/ZA lowering；边界见[桥接审计](../02-evidence/audits/round-22-llvm-hardware-codegen-bridge-audit-2026-10-23.md)，原始资料见[第二十二轮来源卡](../02-evidence/sources/round-22-LLVM代码生成与调度模型原始来源卡.md)。已建立[移动 CPU 微架构历史变化时间线 v0.1](移动CPU微架构历史变化时间线-v0.1-2026-10-23.md)，对应的[初始来源审计](../02-evidence/audits/round-19-cpu-history-timeline-source-audit-2026-10-23.md)列出来源与外推边界。 核内细节见[第十九轮来源卡](../02-evidence/sources/round-19-移动CPU核内微架构原始来源.md)。 跨厂商路线和 IP→SoC→终端时间链见[第二十轮分析](移动CPU跨厂商微架构路线与产品化时间-v0.2-2026-10-23.md)，逐项审计见[第二十轮审计](../02-evidence/audits/round-20-cross-vendor-cpu-route-and-productization-audit-2026-10-23.md)。范围和方法见[历史演进与因果分析框架](../00-project/cpu-uarch-llvm-extension-scope-lock-2026-10-22.md)，目标校正见[第十八轮事务](../00-project/research-transactions/round-18-2026-10-23.md)，第十九轮事务记录见[事务19](../00-project/research-transactions/round-19-2026-10-23.md)，第二十轮记录见[事务20](../00-project/research-transactions/round-20-2026-10-23.md)，当前轮记录见[事务21](../00-project/research-transactions/round-21-2026-10-23.md)。
